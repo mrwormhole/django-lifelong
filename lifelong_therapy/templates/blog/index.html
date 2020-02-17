@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 class="text-center mb-3"> Blog Authors</h1>
+    {% if latest_author_list %}
+        {% for author in latest_author_list %}
+            <div class="card mb-3">
+                <div class="card-body">
+                    <p class="lead">{{ author.author_name }}</p>
+                    <a href="{% url "blog:detail" author.id %}" class="btn btn-primary btn-sm"> Details</a>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+
+    {% endif %}
+{% endblock %}
