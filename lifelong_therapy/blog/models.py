@@ -1,4 +1,7 @@
+import datetime
+
 from django.db import models
+from django.utils import timezone
 
 class Author(models.Model):
     author_name = models.CharField(max_length = 40)
@@ -6,6 +9,9 @@ class Author(models.Model):
 
     def __str__(self):
         return self.author_name
+
+    def was_registered_recently(self):
+        return self.registered_date >= timezone.now() - datetime.timedelta(days = 5)
 
 
 class Post(models.Model):
@@ -16,5 +22,8 @@ class Post(models.Model):
 
     def __str__(self):
         return self.post_header
+
+    def was_published_recently(self):
+        return self.published_date >= timezone.now() - datetime.timedelta(days = 1)
 
 

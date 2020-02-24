@@ -1,5 +1,4 @@
 from django.contrib import admin
-
 from .models import Author, Post
 
 admin.site.site_header = "Lifelong Admin"
