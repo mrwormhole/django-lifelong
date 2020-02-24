@@ -1,5 +1,8 @@
+import datetime
+
 from django.db import models
 from django.core.validators import RegexValidator
+from django.utils import timezone
 
 class Therapist(models.Model):
     therapist_name = models.CharField(max_length = 40)
@@ -22,5 +25,6 @@ class Patient(models.Model):
     def __str__(self):
         return self.patient_name
 
-
+    def is_appointment_date_near(self):
+        return self.appointment_date <= timezone.now() + datetime.timedelta(days = 3)
 
