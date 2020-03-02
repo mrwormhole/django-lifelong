@@ -12,7 +12,7 @@ class Author(models.Model):
 
     def was_registered_recently(self):
         return self.registered_date >= timezone.now() - datetime.timedelta(days = 5)
-
+    
 
 class Post(models.Model):
     post_header = models.CharField(max_length = 200)
