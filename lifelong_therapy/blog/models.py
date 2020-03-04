@@ -19,6 +19,8 @@ class Post(models.Model):
     published_date = models.DateTimeField("date published")
     votes = models.IntegerField(default=0)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
+    # TODO tinymce integration
+    # TODO amazon S3 integration
 
     def __str__(self):
         return self.post_header
