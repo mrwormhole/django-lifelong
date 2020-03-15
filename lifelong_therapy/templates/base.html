@@ -40,7 +40,7 @@
             color: #B000F7 !important;
             font-size: 16px;
             font-weight: 400;
-            margin-top: 2px;
+            margin-top: 5px;
             margin-left: 10px;
             border-bottom: 2px solid #fff;
         }
@@ -56,11 +56,67 @@
             font-size: 16px;
             padding: 10px 15px !important;
             margin-left: 10px;
+            
         }
 
         .custom-button:hover {
             background-color: #B000F7;
             color: #fff !important;
+        }
+
+        .social-footer-facebook {
+            background-color: #0d47a1; 
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            position:relative; 
+            margin-right: 10px;
+        }
+
+        .social-footer-twitter {
+            background-color: #4285F4; 
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            position:relative; 
+            margin-right: 10px;
+        }
+
+        .social-footer-instragram {
+            background-color: #DD2A7B; 
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            position:relative; 
+            margin-right: 10px;
+        }
+
+        .social-footer-child {
+            position:absolute; 
+            top: 12px; 
+            left:12px
+        }
+
+        
+        @media (max-width: 991px) { 
+            .custom-button {
+                width: 100%;
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            .custom-link {
+                border: none;
+            }
+
+            .custom-link:hover {
+                border: none;
+            }
+
+            .social-links {
+                display: flex;
+                justify-content: center;
+            }
         }
     
     </style>
@@ -68,13 +124,13 @@
 
 <body>
     <!--Navbar -->
-    <nav class="mb-1 navbar navbar-expand-lg navbar-light default-color custom-navbar">
+    <nav class="mb-1 navbar fixed-top navbar-expand-lg navbar-light default-color custom-navbar">
         <div class="container">
             <a class="navbar-brand" href="#">
                 {% load static %}
                 <img src="{% static "logo.png" %}" alt="mdb logo" width="200px">
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+            <button class="navbar-toggler purple-gradient" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
                 aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -108,19 +164,20 @@
                         </div>
                     </li>
 
+                  
                     <li class="nav-item">
                         <a class="nav-link custom-button" href="#"><i class="fas fa-calendar-alt"></i> Appointment</a>
                     </li>
                 </ul>
-                <ul class="navbar-nav ml-auto nav-flex-icons">
+                <ul class="navbar-nav ml-auto nav-flex-icons social-links">
                     <li class="nav-item">
                         <a class="nav-link waves-effect waves-light">
-                            <i class="fab fa-facebook" style="color: #275C8B;"></i>
+                            <i class="fab fa-facebook" style="color: #0d47a1;"></i>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link waves-effect waves-light">
-                            <i class="fab fa-twitter" style="color: #2AABD2;"></i>
+                            <i class="fab fa-twitter" style="color: #4285F4;"></i>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -132,7 +189,7 @@
             </div>
         </div>
     </nav>
-    <!--/.Navbar -->
+    <!--Navbar-->
 
     <div class="container">
         <div class="row">
@@ -141,5 +198,52 @@
             </div>
         </div>
     </div>
+
+
+    <!--Footer-->
+    <footer class="page-footer font-small purple darken-3">
+
+        <!-- Footer Elements -->
+        <div class="container">
+      
+          <!-- Grid row-->
+          <div class="row">
+      
+            <!-- Grid column -->
+            <div class="col-md-12 py-5">
+              <div class="mb-4 flex-center">
+      
+                <!-- Facebook -->
+                <a class="fb-ic social-footer-facebook">
+                  <i class="fab fa-facebook-f fa-lg white-text fa-2x social-footer-child"> </i>
+                </a>
+                <!-- Twitter -->
+                <a class="tw-ic social-footer-twitter">
+                  <i class="fab fa-twitter fa-lg white-text fa-2x social-footer-child"> </i>
+                </a>
+
+                <!--Instagram-->
+                <a class="ins-ic social-footer-instragram">
+                  <i class="fab fa-instagram fa-lg white-text fa-2x social-footer-child"> </i>
+                </a>
+
+              </div>
+            </div>
+            <!-- Grid column -->
+      
+          </div>
+          <!-- Grid row-->
+      
+        </div>
+        <!-- Footer Elements -->
+      
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+          <a href="https://www.lifelongtherapy.com/"> Lifelong Counselling</a>
+        </div>
+        <!-- Copyright -->
+      
+      </footer>
+      <!--Footer-->
 </body>
 </html>
