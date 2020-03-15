@@ -97,7 +97,10 @@
             left:12px
         }
 
-        
+        #slides {
+            margin-top: 80px;
+        }
+
         @media (max-width: 991px) { 
             .custom-button {
                 width: 100%;
@@ -164,7 +167,6 @@
                         </div>
                     </li>
 
-                  
                     <li class="nav-item">
                         <a class="nav-link custom-button" href="#"><i class="fas fa-calendar-alt"></i> Appointment</a>
                     </li>
@@ -191,14 +193,12 @@
     </nav>
     <!--Navbar-->
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 m-auto">
-                {% block content %} {% endblock %}
-            </div>
-        </div>
+    <!--Slides-->
+    <div id="slides">
+        {% block content %}
+        {% endblock %}
     </div>
-
+    <!--Slides-->
 
     <!--Footer-->
     <footer class="page-footer font-small purple darken-3">

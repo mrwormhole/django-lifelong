@@ -1,5 +1,67 @@
 {% extends "base.html" %}
     
 {% block content %}
-    <p style="text-align:center"> Welcome to the home page!</p>
+    <!--Carousel Wrapper-->
+<div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
+    <!--Indicators-->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-2" data-slide-to="1"></li>
+      <li data-target="#carousel-example-2" data-slide-to="2"></li>
+    </ol>
+    <!--/.Indicators-->
+    <!--Slides-->
+    
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active">
+        <div class="view">
+            <!-- HARD TO FIND A IMAGE DUDE
+                PLEASE FIND 3 IMAGES THAT MAKES SENSE AND DO THE WRITING ON THEM
+            -->
+            {% load static %}
+          <img class="d-block w-100" src="{% static "test.jpg" %}" alt="test" style="height: 600px;">
+          <div class="mask rgba-black-light"></div>
+        </div>
+        <div class="carousel-caption">
+          <h3 class="h3-responsive">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices tristique ligula sed malesuada. </h3>
+          <p>Duis interdum dignissim tellus non euismod. Fusce tristique nisl iaculis vulputate gravida. Donec scelerisque magna ac gravida dignissim. Phasellus ut leo ipsum. Cras non enim arcu. Donec sagittis purus ut elementum gravida. Donec a iaculis nisl, ac viverra arcu. Sed libero erat, pretium a ipsum quis, posuere vestibulum diam. Vivamus turpis nisi, elementum quis consectetur vel, ultrices sit amet nibh. Proin ut nibh at arcu pharetra porta ut non quam.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <!--Mask color-->
+        <div class="view">
+          <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg" alt="Second slide">
+          <div class="mask rgba-black-strong"></div>
+        </div>
+        <div class="carousel-caption">
+          <h3 class="h3-responsive">Strong mask</h3>
+          <p>Secondary text</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <!--Mask color-->
+        <div class="view">
+          <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg"
+            alt="Third slide">
+          <div class="mask rgba-black-slight"></div>
+        </div>
+        <div class="carousel-caption">
+          <h3 class="h3-responsive">Slight mask</h3>
+          <p>Third text</p>
+        </div>
+      </div>
+    </div>
+    <!--/.Slides-->
+    <!--Controls-->
+    <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+    <!--/.Controls-->
+  </div>
+  <!--/.Carousel Wrapper-->
 {% endblock %}
