@@ -2,6 +2,7 @@ import datetime
 
 from django.db import models
 from django.utils import timezone
+from ckeditor.fields import RichTextField
 
 class Author(models.Model):
     author_name = models.CharField(max_length = 40)
@@ -16,11 +17,11 @@ class Author(models.Model):
 
 class Post(models.Model):
     post_header = models.CharField(max_length = 200)
+    post_image = models.ImageField(blank=True)
+    post_content = RichTextField(blank=True)
     published_date = models.DateTimeField("date published")
     votes = models.IntegerField(default=0)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
-    # TODO tinymce integration
-    # TODO amazon S3 integration
 
     def __str__(self):
         return self.post_header

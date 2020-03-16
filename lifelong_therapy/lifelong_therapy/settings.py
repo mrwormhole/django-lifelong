@@ -31,14 +31,15 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    "appointment.apps.AppointmentConfig",
-    "blog.apps.BlogConfig",
+    "appointment",
+    "blog",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "ckeditor"
 ]
 
 MIDDLEWARE = [
@@ -116,12 +117,14 @@ USE_L10N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.0/howto/static-files/
-
+STATIC_CDN_RESOURCES = os.path.join(os.path.dirname(BASE_DIR), "resources")
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(os.path.dirname(STATIC_CDN_RESOURCES), "static")
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(os.path.dirname(STATIC_CDN_RESOURCES), "media")
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, "media"),
     '/var/www/static/',
 ]
