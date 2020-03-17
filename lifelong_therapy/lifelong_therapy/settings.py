@@ -118,10 +118,11 @@ USE_TZ = True
 
 
 STATIC_CDN_RESOURCES = os.path.join(os.path.dirname(BASE_DIR), "resources")
+
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(os.path.dirname(STATIC_CDN_RESOURCES), "static")
+STATIC_ROOT = os.path.join(STATIC_CDN_RESOURCES, "static")
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(os.path.dirname(STATIC_CDN_RESOURCES), "media")
+MEDIA_ROOT = os.path.join(STATIC_CDN_RESOURCES, "media")
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
