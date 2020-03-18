@@ -14,7 +14,9 @@ class Therapist(models.Model):
 class Patient(models.Model):
     patient_name = models.CharField(max_length = 40)
     patient_email = models.EmailField(default="unspecified@foo.com", max_length = 40)
-    patient_phone_number = models.CharField(max_length = 10, blank = True) # TODO consider using regex in future 
+    patient_phone_number = models.CharField(max_length = 10, blank = True) 
+    # TODO consider using regex in future for only UK numbers
+    # TODO consider adding text message to the patients phone in UK 
     '''in UK numbers are formatted like this;
     +44 7911 123456 global
     0 7911 123456 local

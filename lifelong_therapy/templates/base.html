@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -127,130 +128,27 @@
 
 <body>
     <!--Navbar -->
-    <nav class="mb-1 navbar fixed-top navbar-expand-lg navbar-light default-color custom-navbar">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                {% load static %}
-                <img src="{% static "logo.png" %}" alt="mdb logo" width="200px">
-            </a>
-            <button class="navbar-toggler purple-gradient" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
-                aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item custom-item">
-                        <a class="nav-link custom-link" href="#">Services
-                            <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
-                    <li class="nav-item custom-item">
-                        <a class="nav-link custom-link" href="#">Academy
-                        </a>
-                    </li>
-                    <li class="nav-item custom-item">
-                        <a class="nav-link custom-link" href="#">Contact</a>
-                    </li>
-                    <li class="nav-item custom-item">
-                        <a class="nav-link custom-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item dropdown custom-item">
-                        <a class="nav-link dropdown-toggle custom-link" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Services
-                        </a>
-                        <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-                            <a class="dropdown-item" style="color: #B000F7;" href="#">Addiction Counselling</a>
-                            <a class="dropdown-item" style="color: #B000F7;" href="#">Adolescent Counselling</a>
-                            <a class="dropdown-item" style="color: #B000F7;" href="#">Couples and Marriage Counselling</a>
-                            <a class="dropdown-item" style="color: #B000F7;" href="#">Family Counselling</a>
-                            <a class="dropdown-item" style="color: #B000F7;" href="#">Individual Counselling</a>                     
-                        </div>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link custom-button" href="#"><i class="fas fa-calendar-alt"></i> Appointment</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav ml-auto nav-flex-icons social-links">
-                    <li class="nav-item">
-                        <a class="nav-link waves-effect waves-light">
-                            <i class="fab fa-facebook" style="color: #0d47a1;"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link waves-effect waves-light">
-                            <i class="fab fa-twitter" style="color: #4285F4;"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link waves-effect waves-light">
-                            <i class="fab fa-instagram" style="color: #DD2A7B"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    {% include 'components/navbar.html' %}
     <!--Navbar-->
 
-    <!--Slides-->
-    <div id="slides">
-        {% block slides %}
-        {% endblock %}
-    </div>
-    <!--Slides-->
+    <!--Carousel-->
+    {% block carousel %}
+    {% endblock %}
+    <!--Carousel-->
 
     <!--Cards-->
-    <div class="container" id="cards">
-        {% block cards %}
-        {% endblock %} 
-    </div>
+    {% block cards %}
+    {% endblock %} 
     <!--Cards-->
+
+    <!--Contact-->
+    {% include 'components/contact.html' %}
+    <!--Contact-->
 
     <!--Footer-->
-    <footer class="page-footer font-small purple darken-3">
+    {% include 'components/footer.html' %}
+    <!--Footer-->
 
-        <!-- Footer Elements -->
-        <div class="container">
-      
-          <!-- Grid row-->
-          <div class="row">
-      
-            <!-- Grid column -->
-            <div class="col-md-12 py-5">
-              <div class="mb-4 flex-center">
-      
-                <!-- Facebook -->
-                <a class="fb-ic social-footer-facebook">
-                  <i class="fab fa-facebook-f fa-lg white-text fa-2x social-footer-child"> </i>
-                </a>
-                <!-- Twitter -->
-                <a class="tw-ic social-footer-twitter">
-                  <i class="fab fa-twitter fa-lg white-text fa-2x social-footer-child"> </i>
-                </a>
-
-                <!--Instagram-->
-                <a class="ins-ic social-footer-instragram">
-                  <i class="fab fa-instagram fa-lg white-text fa-2x social-footer-child"> </i>
-                </a>
-
-              </div>
-            </div>
-            <!-- Grid column -->
-      
-          </div>
-          <!-- Grid row-->
-      
-        </div>
-        <!-- Footer Elements -->
-      
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2020 Copyright:
-          <a href="https://www.lifelongtherapy.com/"> Lifelong Counselling</a>
-        </div>
-        <!-- Copyright -->
-      
-      </footer>
-      <!--Footer-->
 </body>
+
 </html>
