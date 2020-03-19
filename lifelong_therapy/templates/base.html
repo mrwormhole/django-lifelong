@@ -5,125 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Lifelong Counselling is built by Goldenhand Software"/> 
     
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet">
     <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
     <!-- Bootstrap core CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.0/css/mdb.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    {% load static %}
+    <link type="text/css" href="{% static "custom.css" %}" rel="stylesheet">
+    <!-- Custom Icon -->
+    {% load static %}
+    <link href="{% static "favicon.ico" %}" rel="icon">
 
-     <!-- JQuery -->
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-     <!-- Bootstrap tooltips -->
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-     <!-- Bootstrap core JavaScript -->
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-     <!-- MDB core JavaScript -->
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.0/js/mdb.min.js"></script>
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.0/js/mdb.min.js"></script>
     
-    <title> Blog {% block title %} {% endblock %} </title>
-    
-    <style type="text/css"> 
-        .custom-navbar {
-            background-color: #fff !important;
-            padding-left: 1.5rem !important;
-            padding-right: 1.5rem !important;
-        }
-
-        .custom-item {
-            background-color: #fff !important;
-        }
-
-        .custom-link {
-            color: #B000F7 !important;
-            font-size: 16px;
-            font-weight: 400;
-            margin-top: 5px;
-            margin-left: 10px;
-            border-bottom: 2px solid #fff;
-        }
-
-        .custom-link:hover {
-            border-bottom: 2px solid #B000F7;
-        }
-
-        .custom-button {
-            border-radius: 20px;
-            border: 2px solid #B000F7;
-            color: #B000F7 !important;
-            font-size: 16px;
-            padding: 10px 15px !important;
-            margin-left: 10px;
-            
-        }
-
-        .custom-button:hover {
-            background-color: #B000F7;
-            color: #fff !important;
-        }
-
-        .social-footer-facebook {
-            background-color: #0d47a1; 
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            position:relative; 
-            margin-right: 10px;
-        }
-
-        .social-footer-twitter {
-            background-color: #4285F4; 
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            position:relative; 
-            margin-right: 10px;
-        }
-
-        .social-footer-instragram {
-            background-color: #DD2A7B; 
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            position:relative; 
-            margin-right: 10px;
-        }
-
-        .social-footer-child {
-            position:absolute; 
-            top: 12px; 
-            left:12px
-        }
-
-        #slides {
-            margin-top: 80px;
-        }
-
-        @media (max-width: 991px) { 
-            .custom-button {
-                width: 100%;
-                text-align: center;
-                margin-top: 10px;
-            }
-
-            .custom-link {
-                border: none;
-            }
-
-            .custom-link:hover {
-                border: none;
-            }
-
-            .social-links {
-                display: flex;
-                justify-content: center;
-            }
-        }
-    
-    </style>
+    <title> Lifelong Counselling {% block title %} - Home {% endblock %} </title>
 </head>
 
 <body>

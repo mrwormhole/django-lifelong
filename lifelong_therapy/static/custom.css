@@ -1,0 +1,95 @@
+.custom-navbar {
+    background-color: #fff !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+}
+
+.custom-item {
+    background-color: #fff !important;
+}
+
+.custom-link {
+    color: #B000F7 !important;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 5px;
+    margin-left: 10px;
+    border-bottom: 2px solid #fff;
+}
+
+.custom-link:hover {
+    border-bottom: 2px solid #B000F7;
+}
+
+.custom-button {
+    border-radius: 20px;
+    border: 2px solid #B000F7;
+    color: #B000F7 !important;
+    font-size: 16px;
+    padding: 10px 15px !important;
+    margin-left: 10px;
+    
+}
+
+.custom-button:hover {
+    background-color: #B000F7;
+    color: #fff !important;
+}
+
+.social-footer-facebook {
+    background-color: #0d47a1; 
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position:relative; 
+    margin-right: 10px;
+}
+
+.social-footer-twitter {
+    background-color: #4285F4; 
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position:relative; 
+    margin-right: 10px;
+}
+
+.social-footer-instragram {
+    background-color: #DD2A7B; 
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position:relative; 
+    margin-right: 10px;
+}
+
+.social-footer-child {
+    position:absolute; 
+    top: 12px; 
+    left:12px
+}
+
+#slides {
+    margin-top: 80px;
+}
+
+@media (max-width: 991px) { 
+    .custom-button {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .custom-link {
+        border: none;
+    }
+
+    .custom-link:hover {
+        border: none;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+    }
+}
