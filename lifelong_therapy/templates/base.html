@@ -30,7 +30,10 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.0/js/mdb.min.js"></script>
-    
+    <!-- Custom JS -->
+    {% load static %}
+    <script type="text/javascript" src="{% static "custom.js" %}"></script>
+
     <title> Lifelong Counselling {% block title %} - Home {% endblock %} </title>
 </head>
 
@@ -48,6 +51,11 @@
     {% block cards %}
     {% endblock %} 
     <!--Cards-->
+
+    <!--Counter-->
+    {% block counter %}
+    {% endblock counter %}
+    <!--Counter-->
 
     <!--Contact-->
     {% include 'components/contact.html' %}
