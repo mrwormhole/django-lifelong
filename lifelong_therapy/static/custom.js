@@ -1,4 +1,4 @@
-(function ($){
+(function ($) {
     $.fn.counter = function() {
       const $this = $(this),
       numberFrom = parseInt($this.attr('data-from')),
@@ -23,8 +23,9 @@
     }
   }(jQuery));
   
-  $(document).ready(function(){
+  $(document).ready(function() {
   
+    // Home page counter
     $('.count-up').counter();
     $('.count1').counter();
     $('.count2').counter();
@@ -34,4 +35,12 @@
     setTimeout(function () {
       $('.count5').counter();
     }, 3000);
+    // Home page counter
+
+    // Home page testimonial
+    $('.testimonial').carousel({
+      interval: 3000
+    });
+    // Home page testimonial
+
   });
