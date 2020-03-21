@@ -70,10 +70,11 @@
 }
 
 #slides {
-    margin-top: 80px;
+    margin-top: 80px !important;
 }
 
-@media (max-width: 991px) { 
+/* For descending */
+@media (max-width: 992px) { 
     .custom-button {
         width: 100%;
         text-align: center;
@@ -92,4 +93,37 @@
         display: flex;
         justify-content: center;
     }
+}
+
+/* For ascending */
+@media (min-width: 576px ) {
+    #carousel-info {
+        font-size: 20px !important;
+    }
+}
+
+#carousel-header {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-shadow: 2px 2px #B000F7;
+    padding-bottom: 0.8rem;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+#carousel-subheader {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+    font-weight: 800;
+    background: -webkit-linear-gradient(#FA8BFF, #2BD2FF, #2BFF88);
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+#carousel-info {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
 }

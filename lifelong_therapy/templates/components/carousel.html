@@ -1,4 +1,4 @@
-<div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
+<div id="carousel-example-2" class="carousel slides carousel-fade" data-ride="carousel">
     <!--Indicators-->
     <ol class="carousel-indicators">
         <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
@@ -7,36 +7,41 @@
     </ol>
     <!--/.Indicators-->
     <!--Slides-->
-    <div class="carousel-inner" role="listbox">
+    <div class="carousel-inner" role="listbox" style="margin-top: 80px;">
         <div class="carousel-item active">
             <div class="view">
                 <!-- HARD TO FIND A IMAGE DUDE
                     PLEASE FIND 3 IMAGES THAT MAKES SENSE AND DO THE WRITING ON THEM
                 -->
                 {% load static %}
-                <img class="d-block w-100" src="{% static "test.jpg" %}" alt="test" style="height: 800px;">
+                <img class="d-block w-100" src="{% static "bg.jpg" %}" alt="test" style="height: 600px;">
                 <div class="mask rgba-black-light"></div>
             </div>
             <div class="carousel-caption">
-                <h3 class="h3-responsive">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices tristique ligula sed malesuada. </h3>
-                <p>Duis interdum dignissim tellus non euismod. Fusce tristique nisl iaculis vulputate gravida. Donec scelerisque magna ac gravida dignissim. Phasellus ut leo ipsum. Cras non enim arcu. Donec sagittis purus ut elementum gravida. Donec a iaculis nisl, ac viverra arcu. Sed libero erat, pretium a ipsum quis, posuere vestibulum diam. Vivamus turpis nisi, elementum quis consectetur vel, ultrices sit amet nibh. Proin ut nibh at arcu pharetra porta ut non quam.</p>
+                <span class="fa-stack fa-3x" style="margin-bottom: 1rem;">
+                    <i class="fas fa-circle fa-stack-2x" style="color:#b000f7 ;"></i>
+                    <i class="fas fa-brain white-text fa-stack-1x fa-inverse"></i>
+                </span>
+                <h1 class="h1-responsive" id="carousel-header"> Lifelong Counselling </h1>
+                <h4 class="h4-responsive mb-md-5" id="carousel-subheader"> Psychology Center in London </h3>
+                <p class="mb-md-5" id="carousel-info">We are long-established by professional therapist experts, psychologists and a psychiatrist, providing care for individuals and organisations both privately and online. We are treating a range of disorders and emotional issues, offering CBT treatment near you for problems around work, depression, anxiety, OCD, PTSD, stress, panic.  </p>
             </div>
         </div>
         <div class="carousel-item">
             <!--Mask color-->
             <div class="view">
-                <img class="d-block w-100" src="{% static "test.jpg" %}" alt="Second slide" style="height: 800px;">
+                <img class="d-block w-100" src="{% static "bg.jpg" %}" alt="Second slide" style="height: 600px;">
                 <div class="mask rgba-black-strong"></div>
             </div>
             <div class="carousel-caption">
-                <h3 class="h3-responsive">Strong mask</h3>
+                <h3 class="h3-responsive align-middle">Strong mask</h3>
                 <p>Secondary text</p>
             </div>
         </div>
         <div class="carousel-item">
             <!--Mask color-->
             <div class="view">
-                <img class="d-block w-100" src="{% static "test.jpg" %}" alt="Third slide" style="height: 800px;">
+                <img class="d-block w-100" src="{% static "bg.jpg" %}" alt="Third slide" style="height: 600px;">
                 <div class="mask rgba-black-slight"></div>
             </div>
             <div class="carousel-caption">
