@@ -1,46 +1,42 @@
 (function ($) {
-    $.fn.counter = function() {
-      const $this = $(this),
-      numberFrom = parseInt($this.attr('data-from')),
-      numberTo = parseInt($this.attr('data-to')),
-      delta = numberTo - numberFrom,
-      deltaPositive = delta > 0 ? 1 : 0,
-      time = parseInt($this.attr('data-time')),
-      changeTime = 10;
-      
-      let currentNumber = numberFrom,
-      value = delta*changeTime/time;
-      var interval1;
-      const changeNumber = () => {
-        currentNumber += value;
-        //checks if currentNumber reached numberTo
-        (deltaPositive && currentNumber >= numberTo) || (!deltaPositive &&currentNumber<= numberTo) ? currentNumber=numberTo : currentNumber;
-        this.text(parseInt(currentNumber));
-        currentNumber == numberTo ? clearInterval(interval1) : currentNumber;  
-      }
+  $.fn.counter = function() {
+    const $this = $(this),
+    numberFrom = parseInt($this.attr('data-from')),
+    numberTo = parseInt($this.attr('data-to')),
+    delta = numberTo - numberFrom,
+    deltaPositive = delta > 0 ? 1 : 0,
+    time = parseInt($this.attr('data-time')),
+    changeTime = 10;
   
-      interval1 = setInterval(changeNumber,changeTime);
+    let currentNumber = numberFrom,
+    value = delta*changeTime/time;
+    var interval1;
+    const changeNumber = () => {
+      currentNumber += value;
+      //checks if currentNumber reached numberTo
+      (deltaPositive && currentNumber >= numberTo) || (!deltaPositive &&currentNumber<= numberTo) ? currentNumber=numberTo : currentNumber;
+      this.text(parseInt(currentNumber));
+      currentNumber == numberTo ? clearInterval(interval1) : currentNumber;  
     }
-  }(jQuery));
-  
-  $(document).ready(function() {
-  
-    // Home page counter
-    $('.count-up').counter();
-    $('.count1').counter();
-    $('.count2').counter();
-    
-    new WOW().init();
-    
-    setTimeout(function () {
-      $('.count5').counter();
-    }, 3000);
-    // Home page counter
 
-    // Home page testimonial
-    $('.testimonial').carousel({
-      interval: 3000
-    });
-    // Home page testimonial
+    interval1 = setInterval(changeNumber,changeTime);
+  }
+}(jQuery));
 
+$(document).ready(function() {
+
+  // Home page counter
+  $('.counter-location').counter();
+  $('.counter-patient').counter();
+  $('.counter-satisfaction').counter();
+  
+  new WOW().init();
+  // Home page counter
+
+  // Home page testimonial
+  $('.testimonial').carousel({
+    interval: 3000
   });
+  // Home page testimonial
+
+});
