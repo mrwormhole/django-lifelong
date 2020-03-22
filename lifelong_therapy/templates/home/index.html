@@ -7,26 +7,30 @@
 {% block cards %}
 <div class="container my-5" id="cards">
   <h6 class="font-weight-bold text-center grey-text text-uppercase small mb-4">Services</h6>
-  <h3 class="font-weight-bold text-center dark-grey-text pb-2">Our Services</h3>
+  <h3 class="font-weight-bold text-center dark-grey-text pb-2">Offering Wide Range of Services</h3>
   <hr class="w-header my-4">
   <p class="lead text-center text-muted pt-2 mb-5">Join thousands of satisfied customers using our template globally.</p>
 
   <div class="row">
-    <div class="col-md-6 col-xl-3 mb-4">
-        {% include 'components/card.html' with cardImage="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" cardTitle="Card Title!" cardText="Some quick example text to build on the card title and make up the bulk of the card's content!" %}
+    <div class="col-md-6 col-xl-6 mb-4 d-flex align-items-stretch">
+      {% include 'components/card.html' with cardImage="/static/individual-counselling.png" cardTitle="Individual Counselling" cardText="Some quick example text to build on the card title and make up the bulk of the card's content!" %}
     </div>
 
-    <div class="col-md-6 col-xl-3 mb-4">
-      {% include 'components/card.html' with cardImage="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" cardTitle="Card Title!" cardText="Some quick example text to build on the card title and make up the bulk of the card's content!" %}
+    <div class="col-md-6 col-xl-6 mb-4 d-flex align-items-stretch">
+      {% include 'components/card.html' with cardImage="/static/family-counselling.png" cardTitle="Family Counselling" cardText="Some quick example text to build on the card title and make up the bulk of the card's content!" %}
     </div>
 
-    <div class="col-md-6 col-xl-3 mb-4">
-      {% include 'components/card.html' with cardImage="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" cardTitle="Card Title!" cardText="Some quick example text to build on the card title and make up the bulk of the card's content!" %}
+    <div class="col-md-6 col-xl-4 mb-4 d-flex align-items-stretch">
+      {% include 'components/card.html' with cardImage="/static/marriage-counselling.png" cardTitle="Couples and Marriage Counselling" cardText="Some quick example text to build on the card title and make up the bulk of the card's content!" %}
     </div>
 
-    <div class="col-md-6 col-xl-3 mb-4">
-      {% include 'components/card.html' with cardImage="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" cardTitle="Card Title!" cardText="Some quick example text to build on the card title and make up the bulk of the card's content!" %}
+    <div class="col-md-6 col-xl-4 mb-4 d-flex align-items-stretch">
+        {% include 'components/card.html' with cardUrl="" cardImage="/static/addiction-counselling.png" cardTitle="Addiction Counselling" cardText="Some quick example text to build on the card title and make up the bulk of the card's content!" %}
     </div>
+
+    <div class="col-md-6 col-xl-4 mb-4 d-flex align-items-stretch">
+      {% include 'components/card.html' with cardImage="/static/adolescent-counselling.png" cardTitle="Adolescent Counselling" cardText="Some quick example text to build on the card title and make up the bulk of the card's content!" %}
+    </div>    
   </div>
 </div>
 {% endblock cards %}

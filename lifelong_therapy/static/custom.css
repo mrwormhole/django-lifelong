@@ -73,7 +73,6 @@
     margin-top: 80px !important;
 }
 
-/* For descending */
 @media (max-width: 992px) { 
     .custom-button {
         width: 100%;
@@ -95,10 +94,16 @@
     }
 }
 
-/* For ascending */
 @media (min-width: 576px ) {
     #carousel-info {
         font-size: 20px !important;
+    }
+}
+
+@media (max-width: 404px) {
+    #carousel-icon {
+        font-size: 1.5rem !important;
+        margin-bottom: 0.5rem !important;
     }
 }
 
@@ -126,4 +131,9 @@
 #carousel-info {
     font-family: "Roboto", sans-serif;
     font-size: 1rem;
+}
+
+#carousel-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }

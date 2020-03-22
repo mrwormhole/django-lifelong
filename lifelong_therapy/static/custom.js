@@ -39,4 +39,7 @@ $(document).ready(function() {
   });
   // Home page testimonial
 
+  var pattern = GeoPattern.generate('LIFELONG COUNSELLING');
+  $('#geopattern').css('background-image', pattern.toDataUrl());
+
 });

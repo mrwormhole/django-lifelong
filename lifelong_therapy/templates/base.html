@@ -30,6 +30,8 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.0/js/mdb.min.js"></script>
+    <!-- GeoPattern -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
     <!-- Custom JS -->
     {% load static %}
     <script type="text/javascript" src="{% static "custom.js" %}"></script>
@@ -61,6 +63,8 @@
     {% block testimonial %}
     {% endblock testimonial %}
     <!--Testimonial-->
+
+    {% include 'components/jumbotron.html' with headerTitle="I am Jumbotron" %}
 
     <!--Contact-->
     {% include 'components/contact.html' %}
