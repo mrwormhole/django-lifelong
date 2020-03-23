@@ -1,6 +1,6 @@
 <nav class="mb-1 navbar fixed-top navbar-expand-lg navbar-light default-color custom-navbar">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
             {% load static %}
             <img src="{% static "logo.png" %}" alt="mdb logo" width="200px">
         </a>
@@ -23,17 +23,15 @@
                     </div>
                 </li>
                 <li class="nav-item custom-item">
-                    <a class="nav-link custom-link" href="#">Academy
+                    <a class="nav-link custom-link" href="{% url 'blog:index' %}">Academy
                     </a>
                 </li>
                 <li class="nav-item custom-item">
-                    <a class="nav-link custom-link" href="#">Contact</a>
+                    <a class="nav-link custom-link" href="{% url 'about' %}">About</a>
                 </li>
                 <li class="nav-item custom-item">
-                    <a class="nav-link custom-link" href="#">About</a>
+                    <a class="nav-link custom-link" href="{% url 'contact' %}">Contact</a>
                 </li>
-               
-
                 <li class="nav-item">
                     <a class="nav-link custom-button" href="#"><i class="fas fa-calendar-alt"></i> Appointment</a>
                 </li>
