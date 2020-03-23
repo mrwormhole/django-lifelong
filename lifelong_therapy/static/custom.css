@@ -69,7 +69,7 @@
     left:12px
 }
 
-#slides {
+#push-down-under-nav {
     margin-top: 80px !important;
 }
 
@@ -137,3 +137,18 @@
     font-size: 3rem;
     margin-bottom: 1rem;
 }
+
+.map-container-section {
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-container-section iframe {
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+ 

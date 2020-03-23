@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+
+
+{% block contact %}
+
+{% include 'components/jumbotron.html' with headerTitle="Contact" %}
+
+<div class="container mt-5">
+      <div class="row dark-grey-text mb-5">
+
+        <div class="col-lg-5 mb-lg-0 pb-lg-3 mb-4">
+
+          <!-- Form with header -->
+          <div class="card">
+            <div class="card-body">
+              <!-- Header -->
+              <div class="form-header" style="color:#B000F7">
+                <h3 class="mt-2"><i class="fas fa-envelope fa-2x fa-pull-right fa-border"></i> Write to us</h3>
+              </div>
+              <p class="dark-grey-text">If you have any questions or concerns, feel free to contact. We'll respond as soon as possible!</p>
+              <!-- Body -->
+              <div class="md-form">
+                <i class="fas fa-user prefix grey-text"></i>
+                <input type="text" id="form-name" class="form-control">
+                <label for="form-name">Your name</label>
+              </div>
+              <div class="md-form">
+                <i class="fas fa-envelope prefix grey-text"></i>
+                <input type="text" id="form-email" class="form-control">
+                <label for="form-email">Your email</label>
+              </div>
+              <div class="md-form">
+                <i class="fas fa-tag prefix grey-text"></i>
+                <input type="text" id="form-Subject" class="form-control">
+                <label for="form-Subject">Subject</label>
+              </div>
+              <div class="md-form">
+                <i class="fas fa-pencil-alt prefix grey-text"></i>
+                <textarea id="form-text" class="form-control md-textarea" rows="3"></textarea>
+                <label for="form-text">Send message</label>
+              </div>
+              <div class="text-center">
+                <button class="btn btn-lg custom-button"><i class="far fa-paper-plane"></i> Send</button>
+              </div>
+            </div>
+          </div>
+          <!-- Form with header -->
+
+        </div>
+        <!-- Grid column -->
+
+        
+        <div class="col-lg-7">
+
+          <!--Google map-->
+          <div id="map-container-section" class="z-depth-1-half map-container-section mb-4" style="height: 400px">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2478.661123733144!2d-0.10873418393821994!3d51.592773879649286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761be4b6fb058b%3A0x8b714b8354237aea!2s87A%20High%20Rd%2C%20Wood%20Green%2C%20London%20N22%206BB!5e0!3m2!1sen!2suk!4v1584924335983!5m2!1sen!2suk" 
+            frameborder="0" 
+            style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
+          
+          <div class="row text-center">
+            <div class="col-md-3">
+              <a class="btn-floating btn-lg purple-gradient">
+                <i class="fas fa-map-marker-alt"></i>
+              </a>
+              <p>87A High Road, Wood Green N22 6BB, UK</p>
+             
+            </div>
+            <div class="col-md-3">
+                <a class="btn-floating btn-lg purple-gradient">
+                  <i class="fas fa-map-marker-alt"></i>
+                </a>
+                <p>2 John Street, Holborn WC1N 2ES, UK</p>
+              </div>
+            <div class="col-md-3">
+              <a class="btn-floating btn-lg purple-gradient">
+                <i class="fas fa-phone"></i>
+              </a>
+              <p>+ 01 234 567 89 <br> Mon - Fri, 9:00-17:00 </p>
+            </div>
+            <div class="col-md-3">
+              <a class="btn-floating btn-lg purple-gradient">
+                <i class="fas fa-envelope"></i>
+              </a>
+              <p>info@lifelongtherapy.com <br> sale@gmail.com </p>
+            </div>
+          </div>
+
+        </div>
+        
+
+      </div>
+</div>    
+{% endblock contact %}
+    

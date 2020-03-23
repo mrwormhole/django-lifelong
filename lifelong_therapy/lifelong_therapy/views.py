@@ -11,6 +11,10 @@ def home(request):
     context = {}
     return render(request, "home/index.html", context)
 
+def contact(request):
+    context = {}
+    return render(request, "home/contact.html", context)
+
 # TODO: Finish index of home page
 
 # TODO: Finish contact of home page
