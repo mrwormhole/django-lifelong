@@ -11,18 +11,14 @@ def home(request):
     context = {}
     return render(request, "home/index.html", context)
 
-def contact(request):
+def services(request):
     context = {}
-    return render(request, "home/contact.html", context)
+    return render(request, "home/services.html", context)
 
 def about(request):
     context = {}
     return render(request, "home/about.html", context)
 
-
-
-#######################################
-
-# TODO: Finish about of home page
-
-# TODO: Finish services of home page????
+def contact(request):
+    context = {}
+    return render(request, "home/contact.html", context)
