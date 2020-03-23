@@ -9,7 +9,7 @@
   <h6 class="font-weight-bold text-center grey-text text-uppercase small mb-4">Services</h6>
   <h3 class="font-weight-bold text-center dark-grey-text pb-2">Offering Wide Range of Services</h3>
   <hr class="w-header my-4">
-  <p class="lead text-center text-muted pt-2 mb-5">Join thousands of satisfied customers using our template globally.</p>
+  <p class="lead text-center text-muted pt-2 mb-5"></p>
 
   <div class="row">
     <div class="col-md-6 col-xl-6 mb-4 d-flex align-items-stretch">
@@ -36,14 +36,111 @@
 {% endblock cards %}
 
 
+{% block features %}
+<div class="purple-gradient">
+  <div class="container  my-5 p-5">
+
+    <h6 class="font-weight-bold text-center text-light text-uppercase small mb-4">About</h6>
+    <h3 class="font-weight-bold text-center white-text pb-2">Why Should You Choose Us?</h3>
+    <hr class="w-header my-4">
+    <p class="lead text-center text-muted pt-2 mb-5"></p>
+
+    <div class="row white-text">
+
+      <div class="col-md-6 col-xl-3 mb-4 d-flex align-items-stretch">
+        {% include 'components/feature.html' with iconName="icon-fa fas fa-life-ring fa-2x" featureTitle="Common Conditions" featureText="Depression, stress, anxiety, trauma, eating disorders,obesity, body image difficulties are just some of the conditions we can help with." %}
+      </div>
+
+      <div class="col-md-6 col-xl-3 mb-4 d-flex align-items-stretch">
+        {% include 'components/feature.html' with iconName="icon-fa fas fa-puzzle-piece fa-2x" featureTitle="What We Offer" featureText="Offering face-to-face or online wide range of Individual, Couples, and Group Therapies, as well as Professional Trainings and Clinical Supervision." %}
+      </div>
+
+      <div class="col-md-6 col-xl-3 mb-4 d-flex align-items-stretch">
+        {% include 'components/feature.html' with iconName="icon-fa fas fa-network-wired fa-2x" featureTitle="Meat The Team" featureText="Multi-disciplinary team made up of Psychiatrists, Psychologists, Psychotherapists." %}
+      </div>
+
+      <div class="col-md-6 col-xl-3 mb-4 d-flex align-items-stretch">
+        {% include 'components/feature.html' with iconName="icon-fa fas fa-key fa-flip-horizontal fa-flip-vertical fa-2x" featureTitle="Accessing Our Services" featureText="Access our services by contacting us directly or making an appointment. We also accept referrals from other health practitioners including GPs and Psychiatrists." %}
+      </div>
+
+    </div>
+    
+  </div>
+</div>
+{% endblock features %}
+
+
+{% block academy %}
+<div class="container mt-5">
+    <h6 class="font-weight-bold text-center grey-text text-uppercase small mb-4">Academy</h6>
+    <h3 class="font-weight-bold text-center pb-2">Read Latest Articles From Us</h3>
+    <hr class="w-header my-4">
+    <p class="lead text-center text-muted pt-2 mb-5"></p>
+
+    <div class="row">
+
+      <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
+        <!-- Card -->
+        <div class="card hoverable">
+          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/58.jpg" alt="Card image cap">
+          <!-- Card content -->
+          <div class="card-body">
+            <a href="#!" class="black-text">We relocated to a new garage</a>
+            <p class="card-title text-muted font-small mt-3 mb-2">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title.</p>
+            <a type="button" class="custom-button">Read more<i class="fa fa-angle-right ml-2"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-md-0 mb-4">
+        <!-- Card -->
+        <div class="card hoverable">
+          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/project4.jpg" alt="Card image cap">
+          <!-- Card content -->
+          <div class="card-body">
+            <a href="#!" class="black-text">Top 5 content marketing strategies</a>
+            <p class="card-title text-muted font-small mt-3 mb-2">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title.</p>
+            <a type="button" class="custom-button">Read more<i class="fa fa-angle-right ml-2"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-0">
+        <!-- Card -->
+        <div class="card hoverable">
+          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/88.jpg" alt="Card image cap">
+          <!-- Card content -->
+          <div class="card-body">
+            <a href="#!" class="black-text">Best practices for minimal design</a>
+            <p class="card-title text-muted font-small mt-3 mb-2">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title.</p>
+            <a type="button" class="custom-button">Read more<i class="fa fa-angle-right ml-2"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-5 mb-5">
+    	<a class="btn btn-lg custom-button" href="#!">Browse All Articles</a>
+    </div>
+
+</div>
+{% endblock academy %}
+  
+  
+
 {% block counter %}
   {% include 'components/counter.html' %}
 {% endblock counter %}
 
-
 {% block testimonial %}
   {% include 'components/testimonial.html' %}
 {% endblock testimonial %}
+
+{% block contact %}
+  {% include 'components/contact.html' %}
+{% endblock contact %}
+  
   
   
 
