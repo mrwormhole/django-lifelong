@@ -11,8 +11,8 @@ def home(request):
     context = {}
     return render(request, "home/index.html", context)
 
-def services(request):
-    context = {}
+def services(request, name):
+    context = {"slugName": name}
     return render(request, "home/services.html", context)
 
 def about(request):

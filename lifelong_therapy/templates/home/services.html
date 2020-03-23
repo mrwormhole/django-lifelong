@@ -1,13 +1,21 @@
+{% extends "base.html" %}
 
-{% if counselling_type == "addiction" %}
-    
-{% elif counselling_type == "adolescent" %}
+{% block title %} - Services {% endblock %}
 
-{% elif counselling_type == "couples" %}
+{% block services %}
+    {% if slugName == "addiction-counselling" %}
+        <p style="margin-top: 80px;">addiction-counselling</p>    
+    {% elif slugName == "adolescent-counselling" %}
+        <p style="margin-top: 80px;">adolescent-counselling</p>
+    {% elif slugName == "couples-and-marriage-counselling" %}
+        <p style="margin-top: 80px;">couples-and-marriage-counselling</p>
+    {% elif slugName == "family-counselling" %}
+        <p style="margin-top: 80px;">family-counselling</p>
+    {% elif slugName == "individual-counselling" %}
+        <p style="margin-top: 80px;">individual-counselling</p>
+    {% else %}
+        <p style="margin-top: 80px;">404 NOT FOUND</p>
+    {% endif %}    
+{% endblock services %}
 
-{% elif counselling_type == "family" %}
-
-{% elif counselling_type == "individual" %}
-
-{% endif %}
     
