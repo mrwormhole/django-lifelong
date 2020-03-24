@@ -100,6 +100,12 @@
     }
 }
 
+@media(max-width: 404px) {
+    .jumbotron-text {
+        font-size: 2rem !important;
+    }
+}
+
 @media (max-width: 404px) {
     #carousel-icon {
         font-size: 1.5rem !important;
@@ -151,4 +157,18 @@
     width:100%;
     position:absolute;
 }
- 
+
+.jumbotron-header {
+    min-height: 400px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    filter: brightness(90%);
+}
+
+.jumbotron-text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 4rem;
+    text-shadow: 2px 2px #B000F7;
+    text-align: center;
+}

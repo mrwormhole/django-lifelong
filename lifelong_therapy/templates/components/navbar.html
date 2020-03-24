@@ -15,11 +15,11 @@
                     aria-haspopup="true" aria-expanded="false">Services
                     </a>
                     <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-                        <a class="dropdown-item" style="color: #B000F7;" href="#">Addiction Counselling</a>
-                        <a class="dropdown-item" style="color: #B000F7;" href="#">Adolescent Counselling</a>
-                        <a class="dropdown-item" style="color: #B000F7;" href="#">Couples and Marriage Counselling</a>
-                        <a class="dropdown-item" style="color: #B000F7;" href="#">Family Counselling</a>
-                        <a class="dropdown-item" style="color: #B000F7;" href="#">Individual Counselling</a>                     
+                        <a class="dropdown-item" style="color: #B000F7;" href="{% url 'services' name="addiction-counselling" %}">Addiction Counselling</a>
+                        <a class="dropdown-item" style="color: #B000F7;" href="{% url 'services' name="adolescent-counselling" %}">Adolescent Counselling</a>
+                        <a class="dropdown-item" style="color: #B000F7;" href="{% url 'services' name="couples-and-marriage-counselling" %}">Couples and Marriage Counselling</a>
+                        <a class="dropdown-item" style="color: #B000F7;" href="{% url 'services' name="family-counselling" %}">Family Counselling</a>
+                        <a class="dropdown-item" style="color: #B000F7;" href="{% url 'services' name="individual-counselling" %}">Individual Counselling</a>                     
                     </div>
                 </li>
                 <li class="nav-item custom-item">

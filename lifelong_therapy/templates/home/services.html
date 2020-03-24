@@ -3,19 +3,63 @@
 {% block title %} - Services {% endblock %}
 
 {% block services %}
+
     {% if slugName == "addiction-counselling" %}
-        <p style="margin-top: 80px;">addiction-counselling</p>    
+        <!--Jumbotron-->
+        {% load static %}
+        <div class="jumbotron jumbotron-header mb-0" id="push-down-under-nav" style="background-image: url('/static/header-addiction-counselling.jpg');">
+            <div class="text-white text-center py-0 px-4">
+                <h1 class="card-title h1-responsive font-bold mx-auto my-5 py-5 jumbotron-text"><strong>Addiction Counselling</strong></h1>
+            </div>
+        </div>
+   
     {% elif slugName == "adolescent-counselling" %}
-        <p style="margin-top: 80px;">adolescent-counselling</p>
+        <!--Jumbotron-->
+        {% load static %}
+        <div class="jumbotron jumbotron-header mb-0" id="push-down-under-nav" style="background-image: url('/static/header-adolescent-counselling.jpg');">
+            <div class="text-white text-center py-0 px-4">
+                <h1 class="card-title h1-responsive font-bold mx-auto my-5 py-5 jumbotron-text"><strong>Adolescent Counselling</strong></h1>
+            </div>
+        </div>
+
     {% elif slugName == "couples-and-marriage-counselling" %}
-        <p style="margin-top: 80px;">couples-and-marriage-counselling</p>
+        <!--Jumbotron-->
+        {% load static %}
+        <div class="jumbotron jumbotron-header mb-0" id="push-down-under-nav" style="background-image: url('/static/header-couples-and-marriage-counselling.jpg');">
+            <div class="text-white text-center py-0 px-4">
+                <h1 class="card-title h1-responsive font-bold mx-auto my-5 py-5 jumbotron-text"><strong>Couples and Marriage Counselling</strong></h1>
+            </div>
+        </div>
+
     {% elif slugName == "family-counselling" %}
-        <p style="margin-top: 80px;">family-counselling</p>
+        <!--Jumbotron-->
+        {% load static %}
+        <div class="jumbotron jumbotron-header mb-0" id="push-down-under-nav" style="background-image: url('/static/header-family-counselling.jpg');">
+            <div class="text-white text-center py-0 px-4">
+                <h1 class="card-title h1-responsive font-bold mx-auto my-5 py-5 jumbotron-text"><strong>Family Counselling</strong></h1>
+            </div>
+        </div>
+
     {% elif slugName == "individual-counselling" %}
-        <p style="margin-top: 80px;">individual-counselling</p>
+        <!--Jumbotron-->
+        {% load static %}
+        <div class="jumbotron jumbotron-header mb-0" id="push-down-under-nav" style="background-image: url('/static/header-individual-counselling.jpg');">
+            <div class="text-white text-center py-0 px-4">
+                <h1 class="card-title h1-responsive font-bold mx-auto my-5 py-5 jumbotron-text"><strong>Individual Counselling</strong></h1>
+            </div>
+        </div>
+
     {% else %}
-        <p style="margin-top: 80px;">404 NOT FOUND</p>
+        <!--Jumbotron-->
+        {% load static %}
+        <div class="jumbotron jumbotron-header mb-0" id="push-down-under-nav" style="background-image: url('/static/test.jpg');">
+            <div class="text-white text-center py-0 px-4">
+                <h1 class="card-title h1-responsive font-bold mx-auto my-5 py-5 jumbotron-text"><strong>404 NOT FOUND</strong></h1>
+            </div>
+        </div>
+
+       
     {% endif %}    
 {% endblock services %}
 
-    
+
