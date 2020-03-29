@@ -22,3 +22,7 @@ def about(request):
 def contact(request):
     context = {}
     return render(request, "home/contact.html", context)
+
+def online_therapy(request):
+    context = {}
+    return render(request, "home/onlineTherapy.html", context)
