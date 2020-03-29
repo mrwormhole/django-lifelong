@@ -9,7 +9,7 @@ urlpatterns = [
     path("contact/", views.contact, name="contact"),
     path("about/", views.about, name="about"),
     path("services/<slug:name>", views.services, name="services"),
-    path("academy/", include("blog.urls")),
+    path("blog/", include("blog.urls")),
     path("appointment/", include("appointment.urls")),
     path('master/', admin.site.urls),
 ]
