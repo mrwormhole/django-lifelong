@@ -1,57 +1,50 @@
 {% extends "base.html" %}
+
+{% block title %} - Blog {% endblock %}
     
 {% block blog %}
     {% include 'components/jumbotron.html' with headerTitle="Blog" %}
 
-<div class="container mt-5">
+    <div class="container mt-5">
 
-    <h2 class="text-center font-weight-bold mb-4 pb-2">Recent Articles</h2>
-    <p class="text-center mx-auto w-responsive mb-5"></p>
-    <hr class="my-5">
+        <h2 class="text-center font-weight-bold mb-4 pb-2">Recent Articles</h2>
+        <p class="text-center mx-auto w-responsive mb-5"></p>
+        <hr class="my-5">
 
-    <div class="row">
+        <div class="row">
+            {% if latest_post_list %}
+                {% for post in latest_post_list %}
+                    <div class="col-lg-5 col-xl-4 mb-5">
 
-    {% if latest_post_list %}
-        {% for post in latest_post_list %}
-            <div class="col-lg-5 col-xl-4 mb-5">
+                        <!-- Featured image -->
+                        <div class="view overlay rounded z-depth-1-half mb-lg-0">
+                        <img class="img-fluid" src="{{post.post_image.url}}" alt="Sample image">
+                        <a>
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                        </div>
 
-                <!-- Featured image -->
-                <div class="view overlay rounded z-depth-1-half mb-lg-0">
-                <img class="img-fluid" src="{{post.post_image.url}}" alt="Sample image">
-                <a>
-                    <div class="mask rgba-white-slight"></div>
-                </a>
-                </div>
+                    </div>
+                
+                    <div class="col-lg-7 col-xl-8 mb-4" style="margin-bottom: 3rem !important;">
 
-            </div>
-        
-            <div class="col-lg-7 col-xl-8 mb-4" style="margin-bottom: 3rem !important;">
+                        <!-- Post title -->
+                        <h4 class="font-weight-bold mb-3"><strong>{{post.post_header}}</strong></h4>
+                        <!-- Excerpt -->
+                        <p class="dark-grey-text">{{post.post_content|safe|slice:":140"}}...</p>
+                        <!-- Post data -->
+                        <p>by <a class="font-weight-bold">{{ post.author }}</a>, {{post.published_date}}</p>
+                        <!-- Read more button -->
+                        <a href="{% url "blog:detail" post.id %}" class="btn custom-button btn-md mx-0 btn-rounded"> Read more </a>
 
-                <!-- Post title -->
-                <h4 class="font-weight-bold mb-3"><strong>{{post.post_header}}</strong></h4>
-                <!-- Excerpt -->
-                <p class="dark-grey-text">{{post.post_content|safe|slice:":140"}}...</p>
-                <!-- Post data -->
-                <p>by <a class="font-weight-bold">{{ post.author }}</a>, {{post.published_date}}</p>
-                <!-- Read more button -->
-                <a href="{% url "blog:detail" post.id %}" class="btn custom-button btn-md mx-0 btn-rounded"> Read more </a>
-
-            </div>
-
-          
-           
-        {% endfor %}
-    {% else %}
-
-    {% endif %}
-
-   
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
 
     </div>
 
-</div>
-
-<hr>
+    <hr>
 
     {% include 'components/subscribeForm.html' %}
 {% endblock %}
