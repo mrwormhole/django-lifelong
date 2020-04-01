@@ -1,10 +1,99 @@
 {% extends 'base.html' %}
 
+
+{% block pageSpecificJS %}
+    {% load static %}
+    <script type="text/javascript" src="{% static "test.js" %}"></script>
+{% endblock pageSpecificJS %}
+    
 {% block title %} - Online Therapy {% endblock %}
 
 {% block onlineTherapy %}
-<br>
-<br>
-<br>
+    <!--Jumbotron-->
+    {% load static %}
+    <div class="jumbotron jumbotron-header mb-0" id="push-down-under-nav" style="background-image: url('/static/header-online-therapy.jpg');">
+        <div class="text-white text-center py-0 px-4">
+            <h1 class="card-title h1-responsive font-bold mx-auto my-5 py-5 jumbotron-text"><strong>Online Therapy</strong></h1>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <h2 class="font-weight-bold pb-2 mb-4 text-center">7 Facts About Online Therapy</h2>
+        <p class="text-muted mb-5 px-4">
+            <ol>
+                <li>
+                    Far from being a new idea, it started in the 1970s-1980s, well before most people had even heard the word “internet”. Psychotherapists and their clients were always looking for solutions in cases where face-to-face communication became impractical, such as due to distance. Computers and their network abilities attracted a lot of attention in this respect. As early as in 1972, computers in universities such as Stanford and UCLA created a network for a psychotherapy trial. Perhaps this should be considered the birth of online counseling.
+                </li>
+                <br>
+                <li>
+                    It is not complicated. If you can use a smartphone, that’s more than enough. There are many ways to conduct this type of counselling such as via Skype, WhatsApp or any other video-chat app. There are differences in terms of security, cost (most are free) and other factors, but in technical terms they can all work for you. Let us help you find the most appropriate online therapist you can afford, and they’ll help you connect on their preferred system. Finding a suitable counselor is far more important than the type of therapy used, or the specific video-chat application used. We can match you with the most appropriate online psychotherapist, just call now on +44 2034 178200 or if it’s more convenient use the live-chat function.
+                </li>
+                <br>
+                <li>
+                    There is no officially accepted definition what “online therapy” is. For practical purposes, any distant or remote way of communication during a therapy session would fall under this definition. Strictly speaking, talk therapy via the phone isn’t exactly “online” but it can be just as helpful. Moreover, there are many names attributed to the same: telepsychology, web therapy, Skype psychotherapy, remote treatment, phone therapy, text therapy or online therapy.
+                </li>
+                <br>
+                <li>
+                    It can be significantly more cost effective than face-to-face therapy. Expenses for the therapist and client are far lower. The counsellor normally has to pay office rent and maintenance, travel and subsistence expenses to occupy an office which is sometimes far away. The client ultimately pays towards these expenses, using money which would be better spent hiring a better online counsellor. There are other direct savings too, such as reduced travel costs and valuable time saved. The convenience of online treatment makes it a great option in many cases.
+                </li>
+                <br>
+                <li>
+                    Over 90% of users stated convenience as one of the main reasons for selecting this type of counselling online.
+                </li>
+                <br>
+                <li>
+                    Counselling online is not limited to any specific issue. It covers the full range of therapy types including common ones such as online stress management, CBT, EMDR and others. We have a wide choice of online psychotherapists who are both affordable and experienced. It’s also suitable if you’ve suffered a trauma, if you’re an individual or couple with relationship or divorce issues or if you need help with relationships with others – all is covered. Whatever issue you’re facing, call now on your issue – call now on +44 2034 178200 to find out how this can be helped, whether online or not, or have a chat with one of our friendly customer advisors using the live chat button below.
+                </li>
+                <br>
+                <li>
+                    More than half of traditional face-to-face therapists also offer “Skype therapy”, for example when they (or the client) are travelling or otherwise unable to conduct a regular session. The use of therapy for them is only occasional and supplemental to their standard face-to-face sessions. This differs from online therapists conducting all sessions online and often from a considerable distance.
+                </li>
+            </ol>
+        </p>
+        <hr class="my-5">
+
+        <h2 class="font-weight-bold pb-2 mb-4 text-center">Effectiveness of Online Therapy vs Face-to-face</h2>
+        <p class="text-muted mb-5 px-4">
+            <span>&nbsp&nbsp&nbsp&nbsp</span>Over the last 20 years, there has been a fast-growing body of scientific research dedicated to comparing the two. So far, the short answer seems to be that remote therapy is the same or even more efficient than face-to-face. However the same scientists do not recommend that therapists totally abandon face-to-face sessions for a few different reasons:
+            <ol>
+                <li>
+                    For certain individuals, meeting face-to-face is indispensable and they will only use that method no matter what everyone else says. Whether it’s down to individual preference, conservatism or just inertia – the result is the same. For those who prefer in-office / face-to-face sessions, you will always find suitable counsellors when you speak with our team on +44 2034 178200.
+                </li>
+                <br>
+                <li>
+                    Different research may focus on different types of therapy online such as text therapy, email therapy, phone therapy, DIY online therapy, diary-journal therapy and video chat therapy. Therefore, in many cases the comparison is between a “traditional” method versus a rather unusual one (which in real life, contrary to research, is rarely used and is applicable only to a small number of followers).
+                </li>
+                <br>
+                <li>
+                    If we consider only research that compares the same type of clients and therapists, with therapy either delivered face-to-face or via video-chat for talk therapy with online therapists from the comfort of their home, then the results are clear. In such a comparison, the online methods appear to achieve better results in the majority of cases.
+                </li>
+                <br>
+                <li>
+                    The researchers usually attempt to use identical (or even same) therapists in both settings, so the same individuals work as traditional and online psychotherapists. However, in real life the online method allows you to have a much wider choice and due to lower expenses you can meet with a more experienced psychotherapist for the same cost.
+                </li>
+                <br>
+                <li>
+                    There’s usually a subjective factor relating to public opinion of any new method. There’s often hesitation to start with, which suddenly changes to unreasonable praise as new methods are hailed to be “a new revolution”. As time goes on, things settle down and the new method is treated more reasonably and with more common sense. Therefore, although evidence suggests that online therapy is at least as good as face-to-face sessions, we would suggest that people go with whatever works for them and choose a therapist that suits their needs regardless of therapy type.
+                </li>
+                <br>
+                <li>
+                    Online therapists are successfully treating many common forms of mental health issues including anxiety, depression, psychosexual issues, traumas and PTSD, OCD, personality disorders and many more. However, as previously mentioned, personal preference should always be taken into account and if you prefer to see someone face-to-face then this should be an option.
+                </li>
+            </ol>
+        </p>
+        <hr class="my-5">
+
+        <h2 class="font-weight-bold pb-2 mb-4 text-center">How Do Online Therapists Work?</h2>
+        <p class="text-muted mb-4 px-4" style="line-height: 1.8rem;">
+            <span>&nbsp&nbsp&nbsp&nbsp</span>In terms of online video-chat (such as Skype), compared to traditional methods there is no real difference whatsoever. As soon as the video connection is established, everything else continues in the same way.
+            Those who work via a phone connection (without video component), usually have some personal reason for this. They conduct the entire therapy session as a telephone conversation and the session takes shape in the same way as usual.
+            Those who engage text-based therapy (for example email-based treatment) work slightly differently. In most cases, there is a time delay between sending a message and receiving a response. Certain experts are very negative regarding text-therapy, claiming that in absence of verbal communication certain important aspects of therapy disappear. Even if this is right (which is probably the case), the whole issue of such criticism is lost against a simple notion: if a client requests text-only therapy online, there is a reason for that and it should be respected.
+        </p>
+
+        <div class="text-center">
+            <a  href="{% url 'appointment:index' %}" class="btn btn-lg custom-button" style="min-width: 300px;"><i class="fas fa-chevron-right"></i> Book now</a>
+        </div>
+    </div>
+
 {% endblock onlineTherapy %}
     

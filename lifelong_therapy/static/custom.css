@@ -174,9 +174,7 @@
 }
 
 
-/* HERE WO GO FOR MULTI STEP FORM*/
-
-/*form styles*/
+/* Multi Step Form*/
 #msform {
     text-align: center;
     position: relative;
@@ -336,4 +334,26 @@
 #progressbar li.active:before, #progressbar li.active:after {
     background: #ee0979;
     color: white;
+}
+/* Multi Step Form*/
+.floating-button {
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#53946F;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.floating-button:hover {
+    color: #53946F ;
+    background-color: white ;
+}
+
+.my-floating-button-offset{
+	margin-top:22px;
 }
