@@ -33,7 +33,7 @@ class Subscriber(models.Model):
     # Newsletter records go to here. Be sneaky enough to save contact people to newsletter signup
     subscriber_name = models.CharField(max_length = 40)
     subscriber_email = models.EmailField(max_length = 32)
-    subcriber_phone = models.CharField(max_length = 10, blank = True)
+    subscriber_phone = models.CharField(max_length = 10, blank = True)
 
     def __str__(self):
         return self.subscriber_name

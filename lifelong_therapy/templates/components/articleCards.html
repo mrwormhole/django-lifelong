@@ -13,9 +13,9 @@
               <img class="card-img-top" src="{{article.post_image.url}}" alt="Card image cap">
               <!-- Card content -->
               <div class="card-body">
-                <a href="#!" class="black-text" style="font-weight: bold;">{{article.post_header}}</a>
+                <a href="{% url "blog:detail" article.id %}" class="black-text" style="font-weight: bold;">{{article.post_header}}</a>
                 <p class="card-title text-muted font-small mt-3 mb-2">{{article.post_content|safe|slice:":100"}}...</p>
-                <a type="button" class="custom-button">Read more<i class="fa fa-angle-right ml-2"></i></a>
+                <a href="{% url "blog:detail" article.id %}" type="button" class="custom-button">Read more<i class="fa fa-angle-right ml-2"></i></a>
               </div>
             </div>
           </div>
