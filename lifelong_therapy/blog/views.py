@@ -13,5 +13,5 @@ def detail(request, post_id):
     try:
         post = Post.objects.get(pk=post_id)
     except Post.DoesNotExists:
-        raise Http404("Author does not exist")
+        raise Http404("Post does not exist")
     return render(request, "blog/detail.html", { "post": post })
