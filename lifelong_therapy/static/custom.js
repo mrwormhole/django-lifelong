@@ -128,5 +128,5 @@ $(document).ready(function() {
   })*/
   
   // Appointment page form
-
+  $( "#datepicker" ).datepicker({ dateFormat: 'yy-mm-dd',  minDate: "+1d" });
 });

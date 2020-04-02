@@ -216,6 +216,15 @@
     font-size: 13px;
 }
 
+#msform p {
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 13px;
+}
+
 #msform input:focus, #msform textarea:focus {
     -moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
@@ -230,7 +239,7 @@
 
 /*buttons*/
 #msform .action-button {
-    width: 100px;
+    width: 85px;
     background: #ee0979;
     font-weight: bold;
     color: white;
@@ -246,7 +255,7 @@
 }
 
 #msform .action-button-previous {
-    width: 100px;
+    width: 85px;
     background: #C5C5F1;
     font-weight: bold;
     color: white;
@@ -266,7 +275,7 @@
     font-size: 18px;
     text-transform: uppercase;
     color: #2C3E50;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     letter-spacing: 2px;
     font-weight: bold;
 }
@@ -336,6 +345,7 @@
     color: white;
 }
 /* Multi Step Form*/
+
 .floating-button {
 	position:fixed;
 	width:60px;
@@ -346,7 +356,6 @@
 	color:#FFF;
 	border-radius:50px;
 	text-align:center;
-	box-shadow: 2px 2px 3px #999;
 }
 
 .floating-button:hover {
