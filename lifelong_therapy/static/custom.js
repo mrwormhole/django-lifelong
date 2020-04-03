@@ -130,19 +130,31 @@ $(document).ready(function() {
   // Appointment page form
   $( "#datepicker" ).datepicker({ dateFormat: 'yy-mm-dd',  minDate: "+1d" });
 
-  $('.get-time-button').click(function(){
+  $('.get-time-button').click(function() {
+    console.log("I am working!!!")
     var val;
     val = $("#datepicker").val();
     $.ajax(
     {
-        type:"GET",
-        url: "appointment_schedule_times/",
-        data: {
-                 date: val
-        },
-        success: function(data) {
-            console.log(data);
+      type: "GET",
+      url: "appointment_schedule_times/",
+      data: {
+        date: val
+      },
+      success: function(data) {
+        console.log(data);
+        var radioButtons = $( ".custom-control.custom-radio");
+        var len = data.schedule_times.length
+        for(var i=0;i < len;i++) {
+          $(radioButtons[i]).css("display", "block")
+          $(radioButtons[i]).children("label").text(data.schedule_times[i])
+          $(radioButtons[i]).children("input").attr("value", data.schedule_times[i])
+          //$(radioButtons[i]).children("input").attr("name", "radio" + data.schedule_times[i])
         }
-     })
-});
+        for(var i= len; i <8;i++) {
+          $(radioButtons[i]).css("display", "none")
+        }
+      }
+    })
+  });
 });

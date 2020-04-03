@@ -8,7 +8,6 @@ from django.utils import timezone
 class Therapist(models.Model):
     therapist_name = models.CharField(max_length = 40)
     therapist_email = models.EmailField(default="unspecified@foo.com", max_length = 40)
-    therapist_time_schedule = [datetime.time(i,0,0) for i in range(9,17)]
 
     def __str__(self):
         return self.therapist_name
