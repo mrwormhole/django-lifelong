@@ -17,11 +17,10 @@ def appointment_schedule_times(request):
         selected_date = request.GET["date"]
         year,month,day = selected_date.split("-")
         year, month, day = int(year), int(month), int(day)
-        date_first = datetime.date(year,month,day)
-        date_second = date_first + datetime.timedelta(days=1)
-        example_therapist = Therapist.objects.all()[:1].get()
-        patients_on_date = example_therapist.patient_set.all().filter(appointment_date__range=(date_first,date_second))
+        example_therapist = Therapist.objects.all()[:1].get() # Later on therapist names can be selected by user or it will be in administritive order
         
+        patients_on_date = example_therapist.patient_set.all().filter(appointment_date__date=(datetime.date(year,month,day)))
+        print(patients_on_date)
      
         return JsonResponse({
             "schedule_times": [str(),"clown","giraffe"]

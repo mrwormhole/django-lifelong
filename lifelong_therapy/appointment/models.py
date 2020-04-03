@@ -23,6 +23,7 @@ class Patient(models.Model):
     +44 7911 123456 global
     0 7911 123456 local
     '''
+    # tzinfo=pytz.timezone("Europe/London")
     # p = Patient(patient_name="patient pelia", patient_phone_number="404",appointment_date=datetime.datetime(2020,1,1,15,0,0,tzinfo=pytz.UTC), therapist=t) 
     appointment_date = models.DateTimeField("date appointed")
     therapist = models.ForeignKey(Therapist, on_delete=models.CASCADE)
