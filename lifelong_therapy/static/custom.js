@@ -129,4 +129,20 @@ $(document).ready(function() {
   
   // Appointment page form
   $( "#datepicker" ).datepicker({ dateFormat: 'yy-mm-dd',  minDate: "+1d" });
+
+  $('.get-time-button').click(function(){
+    var val;
+    val = $("#datepicker").val();
+    $.ajax(
+    {
+        type:"GET",
+        url: "appointment_schedule_times/",
+        data: {
+                 date: val
+        },
+        success: function(data) {
+            console.log(data);
+        }
+     })
+});
 });
