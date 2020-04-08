@@ -1,0 +1,368 @@
+.custom-navbar {
+    background-color: #fff !important;
+    padding-left: 1.0rem !important;
+    padding-right: 1.0rem !important;
+}
+
+.custom-item {
+    background-color: #fff !important;
+}
+
+.custom-link {
+    color: #B000F7 !important;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 5px;
+    margin-left: 10px;
+    border-bottom: 2px solid #fff;
+}
+
+.custom-link:hover {
+    border-bottom: 2px solid #B000F7;
+}
+
+.custom-button {
+    border-radius: 20px;
+    border: 2px solid #B000F7;
+    color: #B000F7 !important;
+    font-size: 16px;
+    padding: 10px 15px !important;
+    margin-left: 10px;
+    
+}
+
+.custom-button:hover {
+    background-color: #B000F7;
+    color: #fff !important;
+}
+
+.social-footer-facebook {
+    background-color: #0d47a1; 
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position:relative; 
+    margin-right: 10px;
+}
+
+.social-footer-twitter {
+    background-color: #4285F4; 
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position:relative; 
+    margin-right: 10px;
+}
+
+.social-footer-instragram {
+    background-color: #DD2A7B; 
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position:relative; 
+    margin-right: 10px;
+}
+
+.social-footer-child {
+    position:absolute; 
+    top: 12px; 
+    left:12px
+}
+
+#push-down-under-nav {
+    margin-top: 80px !important;
+}
+
+@media (max-width: 992px) { 
+    .custom-button {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .custom-link {
+        border: none;
+    }
+
+    .custom-link:hover {
+        border: none;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 576px ) {
+    #carousel-info {
+        font-size: 20px !important;
+    }
+}
+
+@media(max-width: 404px) {
+    .jumbotron-text {
+        font-size: 2rem !important;
+    }
+}
+
+@media (max-width: 404px) {
+    #carousel-icon {
+        font-size: 1.5rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+}
+
+#carousel-header {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-shadow: 2px 2px #B000F7;
+    padding-bottom: 0.8rem;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+#carousel-subheader {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+    font-weight: 800;
+    background: -webkit-linear-gradient(#FA8BFF, #2BD2FF, #2BFF88);
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+#carousel-info {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+}
+
+#carousel-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.map-container-section {
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-container-section iframe {
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+.jumbotron-header {
+    min-height: 400px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    filter: brightness(90%);
+}
+
+.jumbotron-text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 4rem;
+    text-shadow: 2px 2px #B000F7;
+    text-align: center;
+}
+
+
+/* Multi Step Form*/
+#msform {
+    text-align: center;
+    position: relative;
+    margin-top: 30px;
+    background: transparent; 
+    z-index: 0;
+    margin-bottom: 30px;
+}
+
+#msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 0px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 10%;
+
+    /*stacking fieldsets above each other*/
+    position: relative;
+}
+
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+    display: none;
+}
+
+/*inputs*/
+#msform input, #msform textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 13px;
+}
+
+#msform p {
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 13px;
+}
+
+#msform input:focus, #msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #ee0979;
+    outline-width: 0;
+    transition: All 0.5s ease-in;
+    -webkit-transition: All 0.5s ease-in;
+    -moz-transition: All 0.5s ease-in;
+    -o-transition: All 0.5s ease-in;
+}
+
+/*buttons*/
+#msform .action-button {
+    width: 85px;
+    background: #ee0979;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+
+#msform .action-button:hover, #msform .action-button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #ee0979;
+}
+
+#msform .action-button-previous {
+    width: 85px;
+    background: #C5C5F1;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+
+#msform .action-button-previous:hover, #msform .action-button-previous:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #C5C5F1;
+}
+
+/*headings*/
+.fs-title {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #2C3E50;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.fs-subtitle {
+    font-weight: normal;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/*progressbar*/
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    /*CSS counters to number the steps*/
+    counter-reset: step;
+}
+
+#progressbar li {
+    list-style-type: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 9px;
+    width: 33.33%;
+    float: left;
+    position: relative;
+    letter-spacing: 1px;    
+}
+
+#progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 24px;
+    height: 24px;
+    line-height: 26px;
+    display: block;
+    font-size: 12px;
+    color: #333;
+    background: white;
+    border-radius: 25px;
+    margin: 0 auto 10px auto;
+}
+
+/*progressbar connectors*/
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: white;
+    
+    position: absolute;
+    left: -50%;
+    top: 9px;
+    z-index: -1; /*put it behind the numbers*/
+}
+
+#progressbar li:first-child:after {
+    /*connector not needed before the first step*/
+    content: none;
+}
+
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before, #progressbar li.active:after {
+    background: #ee0979;
+    color: white;
+}
+/* Multi Step Form*/
+
+.floating-button {
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#53946F;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+}
+
+.floating-button:hover {
+    color: #53946F ;
+    background-color: white ;
+}
+
+.my-floating-button-offset{
+	margin-top:22px;
+}
