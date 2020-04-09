@@ -25,7 +25,7 @@ SECRET_KEY = 'pz2-=b$4p26*gweun!-@2scn3n4e1qx$61w=ca0_t^yv!1=f53'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["3.9.117.192"]
+ALLOWED_HOSTS = ["3.8.122.46", "localhost", "127.0.0.1"]
 
 
 # Application definition
@@ -126,6 +126,5 @@ MEDIA_ROOT = os.path.join(STATIC_CDN_RESOURCES, "media")
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
-    os.path.join(BASE_DIR, "media"),
-    '/var/www/static/',
+    os.path.join(BASE_DIR, "media")
 ]
