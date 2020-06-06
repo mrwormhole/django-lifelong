@@ -1,92 +1,94 @@
 <!-- MultiStep Form -->
-<div class="row justify-content-md-center" style="margin-top: -32px; background: #6441A5;">
-    <div class="col col-md-auto" >
-        <form id="msform" method="POST" action=".">
-            {% csrf_token %}
-            <!-- progressbar -->
-            <ul id="progressbar">
-                <li class="active">Personal Details</li>
-                <li>Appointment Date</li>
-                <li>Appointment Time</li>
-            </ul>
-            <!-- fieldsets -->
-            <fieldset>
-                <h2 class="fs-title">Personal Details</h2>
-                <!--<h3 class="fs-subtitle">Tell us something more about you</h3>-->
-                <input type="text" name="fullname" placeholder="Full Name"/>
-                <input type="text" name="email" placeholder="Email"/>
-                <input type="text" name="phone" placeholder="Phone"/>
+<div class="container dark-purple-background" >
+    <div class="row justify-content-md-center" style="margin-top: -2rem; min-height: 600px; padding-top: 2rem; ">
+        <div class="col col-md-12" >
+            <form id="msform" method="POST" action=".">
+                {% csrf_token %}
+                <!-- progressbar -->
+                <ul id="progressbar">
+                    <li class="active">Personal Details</li>
+                    <li>Appointment Date</li>
+                    <li>Appointment Time</li>
+                </ul>
+                <!-- fieldsets -->
+                <fieldset>
+                    <h2 class="fs-title">Personal Details</h2>
+                    <!--<h3 class="fs-subtitle">Tell us something more about you</h3>-->
+                    <input type="text" name="fullname" placeholder="Full Name"/>
+                    <input type="text" name="email" placeholder="Email"/>
+                    <input type="text" name="phone" placeholder="Phone"/>
+                    
+                    <input type="button" name="next" class="next action-button" value="Next"/>
+                </fieldset>
+                <fieldset>
+                    <h2 class="fs-title">Appointment Date</h2>
+                    <!--<h3 class="fs-subtitle">Your presence on the social network</h3>--> 
                 
-                <input type="button" name="next" class="next action-button" value="Next"/>
-            </fieldset>
-            <fieldset>
-                <h2 class="fs-title">Appointment Date</h2>
-                <!--<h3 class="fs-subtitle">Your presence on the social network</h3>--> 
-               
-                <p><i class="fas fa-clock"></i> 50 mins</p>
-                <p><i class="fas fa-user"></i> 1 person</p>
-                <p style="padding-bottom: 20px;"><i class="fas fa-map-marker-alt"></i> LifeLong London, UK </p>
-                <input type="text" id="datepicker" name="date" placeholder="Date">
+                    <p><i class="fas fa-clock"></i> 50 mins</p>
+                    <p><i class="fas fa-user"></i> 1 person</p>
+                    <p style="padding-bottom: 20px;"><i class="fas fa-map-marker-alt"></i> LifeLong London, UK </p>
+                    <input type="text" id="datepicker" name="date" placeholder="Date">
 
-                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
-                <input type="button" name="next" class="next action-button get-time-button" value="Next"/>
-            </fieldset>
-            <fieldset>
-                <h2 class="fs-title">Appointment Time</h2>
-                <!--<h3 class="fs-subtitle">Fill in your credentials</h3>-->
+                    <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                    <input type="button" name="next" class="next action-button get-time-button" value="Next"/>
+                </fieldset>
+                <fieldset>
+                    <h2 class="fs-title">Appointment Time</h2>
+                    <!--<h3 class="fs-subtitle">Fill in your credentials</h3>-->
 
-                <!-- Group of default radios - option 1 -->
-                <div class="custom-control custom-radio">
-                    <input type="radio" class="custom-control-input" id="defaultGroupExample1" name="time">
-                    <label class="custom-control-label" for="defaultGroupExample1">null</label>
-                </div>
-  
-                <!-- Group of default radios - option 2 -->
-                <div class="custom-control custom-radio">
-                    <input type="radio" class="custom-control-input" id="defaultGroupExample2" name="time">
-                    <label class="custom-control-label" for="defaultGroupExample2">null</label>
-                </div>
-  
-                <!-- Group of default radios - option 3 -->
-                <div class="custom-control custom-radio">
-                    <input type="radio" class="custom-control-input" id="defaultGroupExample3" name="time">
-                    <label class="custom-control-label" for="defaultGroupExample3">null</label>
-                </div>
+                    <!-- Group of default radios - option 1 -->
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="defaultGroupExample1" name="time">
+                        <label class="custom-control-label" for="defaultGroupExample1">null</label>
+                    </div>
+    
+                    <!-- Group of default radios - option 2 -->
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="defaultGroupExample2" name="time">
+                        <label class="custom-control-label" for="defaultGroupExample2">null</label>
+                    </div>
+    
+                    <!-- Group of default radios - option 3 -->
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="defaultGroupExample3" name="time">
+                        <label class="custom-control-label" for="defaultGroupExample3">null</label>
+                    </div>
 
-                <!-- Group of default radios - option 4 -->
-                <div class="custom-control custom-radio">
-                    <input type="radio" class="custom-control-input" id="defaultGroupExample4" name="time">
-                    <label class="custom-control-label" for="defaultGroupExample4">null</label>
-                </div>
+                    <!-- Group of default radios - option 4 -->
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="defaultGroupExample4" name="time">
+                        <label class="custom-control-label" for="defaultGroupExample4">null</label>
+                    </div>
 
-                <!-- Group of default radios - option 5 -->
-                <div class="custom-control custom-radio">
-                    <input type="radio" class="custom-control-input" id="defaultGroupExample5" name="time">
-                    <label class="custom-control-label" for="defaultGroupExample5">null</label>
-                </div>
+                    <!-- Group of default radios - option 5 -->
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="defaultGroupExample5" name="time">
+                        <label class="custom-control-label" for="defaultGroupExample5">null</label>
+                    </div>
 
-                <!-- Group of default radios - option 6 -->
-                <div class="custom-control custom-radio">
-                    <input type="radio" class="custom-control-input" id="defaultGroupExample6" name="time">
-                    <label class="custom-control-label" for="defaultGroupExample6">null</label>
-                </div>
+                    <!-- Group of default radios - option 6 -->
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="defaultGroupExample6" name="time">
+                        <label class="custom-control-label" for="defaultGroupExample6">null</label>
+                    </div>
 
-                <!-- Group of default radios - option 7 -->
-                <div class="custom-control custom-radio">
-                    <input type="radio" class="custom-control-input" id="defaultGroupExample7" name="time">
-                    <label class="custom-control-label" for="defaultGroupExample7">null</label>
-                </div>
+                    <!-- Group of default radios - option 7 -->
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="defaultGroupExample7" name="time">
+                        <label class="custom-control-label" for="defaultGroupExample7">null</label>
+                    </div>
 
-                <!-- Group of default radios - option 8 -->
-                <div class="custom-control custom-radio">
-                    <input type="radio" class="custom-control-input" id="defaultGroupExample8" name="time">
-                    <label class="custom-control-label" for="defaultGroupExample8">null</label>
-                </div>
+                    <!-- Group of default radios - option 8 -->
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="defaultGroupExample8" name="time">
+                        <label class="custom-control-label" for="defaultGroupExample8">null</label>
+                    </div>
 
-                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
-                <input type="submit" name="submit" class="submit action-button" value="Submit"/>
-            </fieldset>
-        </form>
+                    <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                    <input type="submit" name="submit" class="submit action-button" value="Submit"/>
+                </fieldset>
+            </form>
+        </div>
     </div>
 </div>
 <!-- /.MultiStep Form -->

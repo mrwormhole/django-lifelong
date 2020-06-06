@@ -11,7 +11,7 @@ urlpatterns = [
     path("about/", views.about, name="about"),
     path("services/<slug:name>", views.services, name="services"),
     path("blog/", include("blog.urls")),
-    path("appointment/", include("appointment.urls")),
+    path("book-appointment/", include("appointment.urls")),
     path('master/', admin.site.urls),
 ]
 

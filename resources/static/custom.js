@@ -1,3 +1,4 @@
+// Custom jQuery Counter function
 (function ($) {
   $.fn.counter = function() {
     const $this = $(this),

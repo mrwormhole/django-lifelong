@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %} - Services {% endblock %}
 
@@ -6,7 +7,6 @@
 
     {% if slugName == "addiction-counselling" %}
         <!--Jumbotron-->
-        {% load static %}
         <div class="jumbotron jumbotron-header mb-0" id="push-down-under-nav" style="background-image: url('/static/header-addiction-counselling.jpg');">
             <div class="text-white text-center py-0 px-4">
                 <h1 class="card-title h1-responsive font-bold mx-auto my-5 py-5 jumbotron-text"><strong>Addiction Counselling</strong></h1>
@@ -17,7 +17,6 @@
             <div class="row px-md-5 dark-grey-text text-center text-lg-left">
         
                 <div class="col-lg-7 mb-4 mb-lg-0">
-                    {% load static %}
                     <img src="{% static "addiction-content.jpg" %}" class="img-fluid" alt="">
                 </div>
         
@@ -75,7 +74,6 @@
    
     {% elif slugName == "adolescent-counselling" %}
         <!--Jumbotron-->
-        {% load static %}
         <div class="jumbotron jumbotron-header mb-0" id="push-down-under-nav" style="background-image: url('/static/header-adolescent-counselling.jpg');">
             <div class="text-white text-center py-0 px-4">
                 <h1 class="card-title h1-responsive font-bold mx-auto my-5 py-5 jumbotron-text"><strong>Adolescent Counselling</strong></h1>
@@ -86,7 +84,6 @@
             <div class="row px-md-5 dark-grey-text text-center text-lg-left">
         
                 <div class="col-lg-7 mb-4 mb-lg-0">
-                    {% load static %}
                     <img src="{% static "adolescent-content.jpg" %}" class="img-fluid" alt="">
                 </div>
         
@@ -142,7 +139,6 @@
 
     {% elif slugName == "couples-and-marriage-counselling" %}
         <!--Jumbotron-->
-        {% load static %}
         <div class="jumbotron jumbotron-header mb-0" id="push-down-under-nav" style="background-image: url('/static/header-couples-and-marriage-counselling.jpg');">
             <div class="text-white text-center py-0 px-4">
                 <h1 class="card-title h1-responsive font-bold mx-auto my-5 py-5 jumbotron-text"><strong>Couples and Marriage Counselling</strong></h1>
@@ -153,7 +149,6 @@
             <div class="row px-md-5 dark-grey-text text-center text-lg-left">
         
                 <div class="col-lg-7 mb-4 mb-lg-0">
-                    {% load static %}
                     <img src="{% static "couples-and-marriage-content.jpg" %}" class="img-fluid" alt="">
                 </div>
         
@@ -224,7 +219,6 @@
 
     {% elif slugName == "family-counselling" %}
         <!--Jumbotron-->
-        {% load static %}
         <div class="jumbotron jumbotron-header mb-0" id="push-down-under-nav" style="background-image: url('/static/header-family-counselling.jpg');">
             <div class="text-white text-center py-0 px-4">
                 <h1 class="card-title h1-responsive font-bold mx-auto my-5 py-5 jumbotron-text"><strong>Family Counselling</strong></h1>
@@ -235,7 +229,6 @@
             <div class="row px-md-5 dark-grey-text text-center text-lg-left">
         
                 <div class="col-lg-7 mb-4 mb-lg-0">
-                    {% load static %}
                     <img src="{% static "family-content.jpg" %}" class="img-fluid" alt="">
                 </div>
         
@@ -267,7 +260,6 @@
 
     {% elif slugName == "individual-counselling" %}
         <!--Jumbotron-->
-        {% load static %}
         <div class="jumbotron jumbotron-header mb-0" id="push-down-under-nav" style="background-image: url('/static/header-individual-counselling.jpg');">
             <div class="text-white text-center py-0 px-4">
                 <h1 class="card-title h1-responsive font-bold mx-auto my-5 py-5 jumbotron-text"><strong>Individual Counselling</strong></h1>
@@ -278,7 +270,6 @@
             <div class="row px-md-5 dark-grey-text text-center text-lg-left">
         
                 <div class="col-lg-7 mb-4 mb-lg-0">
-                    {% load static %}
                     <img src="{% static "individual-content.jpg" %}" class="img-fluid" alt="">
                 </div>
         
@@ -338,14 +329,12 @@
 
     {% else %}
         <!--Jumbotron-->
-        {% load static %}
         <div class="jumbotron jumbotron-header mb-0" id="push-down-under-nav" style="background-image: url('/static/test.jpg');">
             <div class="text-white text-center py-0 px-4">
                 <h1 class="card-title h1-responsive font-bold mx-auto my-5 py-5 jumbotron-text"><strong>404 NOT FOUND</strong></h1>
             </div>
         </div>
 
-       
     {% endif %}    
 {% endblock services %}
 
