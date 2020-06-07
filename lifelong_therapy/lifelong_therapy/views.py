@@ -16,8 +16,8 @@ def home(request):
             from sendgrid import SendGridAPIClient
             from sendgrid.helpers.mail import Mail
             message = Mail(
-                from_email='info@lifelongtherapy.com',
-                to_emails='lifelonglondon@yandex.com',
+                from_email='domain@lifelongtherapy.com',
+                to_emails='info@lifelongtherapy.com',
                 subject=subject,
                 html_content=('<strong>Hi! I am {}. My email is {}, My phone number is {}. Here is my message: {}</strong>').format(name, email, phone, message))
             try:
@@ -62,8 +62,8 @@ def contact(request):
             from sendgrid import SendGridAPIClient
             from sendgrid.helpers.mail import Mail
             message = Mail(
-                from_email='info@lifelongtherapy.com',
-                to_emails='lifelonglondon@yandex.com',
+                from_email='domain@lifelongtherapy.com',
+                to_emails='info@lifelongtherapy.com',
                 subject='A new person has sent a contact information!',
                 html_content=('<strong>Hi! I am {}. About the subject:{}, I am sending this message:{}, For further details like email please check the panel.</strong>').format(name, subject, message))
             try:

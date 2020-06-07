@@ -23,8 +23,8 @@ def index(request):
         from sendgrid import SendGridAPIClient
         from sendgrid.helpers.mail import Mail
         message = Mail(
-            from_email='info@lifelongtherapy.com',
-            to_emails='lifelonglondon@yandex.com',
+            from_email='domain@lifelongtherapy.com',
+            to_emails='info@lifelongtherapy.com',
             subject='A new person has scheduled an appointment!',
             html_content=('<strong>{} scheduled an appointment at {}, {}. For further details like email and phone number please check the panel.</strong>').format(fullname, time, date))
         try:
