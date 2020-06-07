@@ -19,7 +19,23 @@ def index(request):
         hour, minute = int(hour), int(minute)
 
         # SEND EMAIL HERE
-        ###
+        import os
+        from sendgrid import SendGridAPIClient
+        from sendgrid.helpers.mail import Mail
+        message = Mail(
+            from_email='info@lifelongtherapy.com',
+            to_emails='lifelonglondon@yandex.com',
+            subject='A new person has scheduled an appointment!',
+            html_content=('<strong>{} scheduled an appointment at {}, {}. For further details like email and phone number please check the panel.</strong>').format(fullname, time, date))
+        try:
+            sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
+            response = sg.send(message)
+            print(response.status_code)
+            print(response.body)
+            print(response.headers)
+        except Exception as e:
+            print(e.message)
+        #####
 
         patient = Patient()
         patient.patient_name = fullname

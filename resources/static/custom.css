@@ -10,8 +10,9 @@
 }
 
 .custom-link {
-    color: #B000F7 !important;
-    font-size: 16px;
+    color: #0094d9 !important;
+    font-family: "Abril-Fatface", serif;
+    font-size: 1rem;
     font-weight: 400;
     margin-top: 5px;
     margin-left: 10px;
@@ -19,13 +20,14 @@
 }
 
 .custom-link:hover {
-    border-bottom: 2px solid #B000F7;
+    border-bottom: 2px solid #0094d9;
 }
 
 .custom-button {
     border-radius: 20px;
-    border: 2px solid #B000F7;
-    color: #B000F7 !important;
+    border: 2px solid #0094d9;
+    font-family: "Abril-Fatface", serif;
+    color: #0094d9 !important;
     font-size: 16px;
     padding: 10px 15px !important;
     margin-left: 10px;
@@ -33,7 +35,7 @@
 }
 
 .custom-button:hover {
-    background-color: #B000F7;
+    background-color: #0094d9;
     color: #fff !important;
 }
 /* Navbar component styling */
@@ -47,6 +49,26 @@
     background-color: #B000F7;
 }
 
+.dark-blue-background {
+    background-color: #003366;
+}
+
+.light-blue-background {
+    background-color: #0094d9;
+}
+
+.ruby-color {
+    color: #E0115F;
+}
+
+.big-font {
+    font-family: "Abril-Fatface", serif;
+}
+
+.small-font {
+    font-family: "Montserrat",sans-serif;
+}
+
 .purple-gradient-background {
     background-color: #B000F7; /* fallback color if gradients are not supported */
     color: #FFF;
@@ -54,6 +76,15 @@
     background-image:    -moz-linear-gradient(to bottom, rgb(255,110,196) 0%, rgb(143,139,247) 100%); /* For Firefox (3.6 to 15) */
     background-image:      -o-linear-gradient(to bottom, rgb(255,110,196) 0%, rgb(143,139,247) 100%); /* For old Opera (11.1 to 12.0) */ 
     background-image:         linear-gradient(to bottom, rgb(255,110,196) 0%, rgb(143,139,247) 100%); /* Standard syntax; must be last */
+}
+
+.blue-gradient-background {
+    background-color: #45cafc; /* fallback color if gradients are not supported */
+    color: #FFF;
+    background-image: -webkit-linear-gradient(top, rgb(69,202,252) 0%, rgb(48,63,159) 100%);
+    background-image:    -moz-linear-gradient(to top, rgb(69,202,252) 0%, rgb(48,63,159) 100%); /* For Firefox (3.6 to 15) */
+    background-image:      -o-linear-gradient(to top, rgb(69,202,252) 0%, rgb(48,63,159) 100%); /* For old Opera (11.1 to 12.0) */ 
+    background-image:         linear-gradient(to top, rgb(69,202,252) 0%, rgb(48,63,159) 100%); /* Standard syntax; must be last */
 }
 /* Backgrounds */
 
@@ -137,27 +168,29 @@
 }
 
 #carousel-header {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Abril-Fatface", serif;
     font-size: 2.2rem;
     font-weight: 600;
-    text-shadow: 2px 2px #B000F7;
-    padding-bottom: 0.8rem;
-    letter-spacing: 2px;
+    text-shadow: 2px 2px 3px #0094d9;
+    padding-bottom: 1rem;
+    letter-spacing: 3px;
     text-align: center;
 }
 
 #carousel-subheader {
-    font-family: "Roboto", sans-serif;
+    font-family: "Montserrat",sans-serif;
     font-size: 1.5rem;
-    padding-bottom: 2rem;
+    padding-bottom: 0.5rem;
     font-weight: 800;
-    color: white; 
+    color: #f0f0f0; 
     text-align: center;
 }
 
 #carousel-info {
-    font-family: "Roboto", sans-serif;
+    font-family: "Montserrat",sans-serif;
     font-size: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 #carousel-icon {
@@ -188,9 +221,9 @@
 }
 
 .jumbotron-text {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Abril-Fatface", serif;
     font-size: 4rem;
-    text-shadow: 2px 2px #B000F7;
+    text-shadow: 2px 2px 1px #0094d9;
     text-align: center;
 }
 

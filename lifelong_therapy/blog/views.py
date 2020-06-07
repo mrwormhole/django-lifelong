@@ -8,7 +8,23 @@ def index(request):
         email = request.POST.get("email")
         
         # SEND EMAIL HERE
-        ###
+        import os
+        from sendgrid import SendGridAPIClient
+        from sendgrid.helpers.mail import Mail
+        message = Mail(
+            from_email='info@lifelongtherapy.com',
+            to_emails='lifelonglondon@yandex.com',
+            subject=('A new person{} has subscribed to your newsletter!').format(email),
+            html_content='<strong>Make sure to checkout subscribers section in the panel for newly added records.</strong>')
+        try:
+            sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
+            response = sg.send(message)
+            print(response.status_code)
+            print(response.body)
+            print(response.headers)
+        except Exception as e:
+            print(e.message)
+        #####
 
         subscriber = Subscriber()
         subscriber.subscriber_name = "Anonymous"

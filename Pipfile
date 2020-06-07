@@ -9,6 +9,7 @@ verify_ssl = true
 django = "*"
 django-ckeditor = "*"
 pillow = "*"
+sendgrid = "*"
 
 [requires]
 python_version = "3.8"
