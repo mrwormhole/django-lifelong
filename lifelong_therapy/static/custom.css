@@ -424,6 +424,90 @@
 }
 /* Floating Button */
 
+/* Banner */
+.banner {
+    height: 368px;
+    overflow: hidden;
+    position: relative;
+  }
+  @media (max-width: 726px) {
+    .banner {
+      height: 300px;
+    }
+  }
+  @media (max-width: 400px) {
+    .banner {
+      height: 260px;
+    }
+  }
+  .banner .banner_img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 99%;
+    display: block;
+  }
+  .banner .banner_img-wrapper:after {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: .7;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: -webkit-linear-gradient(top, rgb(69,202,252) 0%, rgb(48,63,159) 100%);
+    background-image:    -moz-linear-gradient(to top, rgb(69,202,252) 0%, rgb(48,63,159) 100%); /* For Firefox (3.6 to 15) */
+    background-image:      -o-linear-gradient(to top, rgb(69,202,252) 0%, rgb(48,63,159) 100%); /* For old Opera (11.1 to 12.0) */ 
+    background-image:         linear-gradient(to top, rgb(69,202,252) 0%, rgb(48,63,159) 100%); /* Standard syntax; must be last */
+  }
+  .banner .banner_text .banner-header {
+    font-family: "Abril-Fatface", serif;
+    font-size: 2rem;
+    color: #f0f0f0;
 
+  }
+  .banner .banner_text .banner-subheader {
+    font-family: "Montserrat",sans-serif;
+    font-size: 1rem;
+    color: #f0f0f0;
+
+  }
+  .banner .banner_text {
+    margin: -288px auto 0;
+    max-width: 726px;
+    position: relative;
+    color: white;
+    opacity: 0;
+    transform: translateY(5px);
+    animation: fadeIn 1s ease-out forwards;
+  }
+  @media (max-width: 726px) {
+    .banner .banner_text {
+      margin: -240px auto 0;
+      padding: 0 1rem;
+    }
+  }
+  @media (max-width: 400px) {
+    .banner .banner_text {
+      margin: -230px auto 0;
+      text-align: center;
+    }
+  }
+  .banner .banner_img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center 10%;
+  }
+  .banner .curve-mask {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 7vw;
+  }
+/* Banner */
 
 
