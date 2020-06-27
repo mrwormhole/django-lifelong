@@ -81,10 +81,10 @@
 .blue-gradient-background {
     background-color: #45cafc; /* fallback color if gradients are not supported */
     color: #FFF;
-    background: -webkit-linear-gradient(top, rgba(69,202,252), rgba(48,63,159));
-    background:    -moz-linear-gradient(to top, rgba(69,202,252), rgba(48,63,159)); /* For Firefox (3.6 to 15) */
-    background:      -o-linear-gradient(to top, rgba(69,202,252), rgba(48,63,159)); /* For old Opera (11.1 to 12.0) */ 
-    background:         linear-gradient(to top, rgba(69,202,252), rgba(48,63,159)); /* Standard syntax; must be last */
+    background: -webkit-linear-gradient(top, rgba(69,202,252,255), rgba(48,63,159,255));
+    background:    -moz-linear-gradient(to top, rgba(69,202,252,255), rgba(48,63,159,255)); /* For Firefox (3.6 to 15) */
+    background:      -o-linear-gradient(to top, rgba(69,202,252,255), rgba(48,63,159,255)); /* For old Opera (11.1 to 12.0) */ 
+    background:         linear-gradient(to top, rgba(69,202,252,255), rgba(48,63,159,255)); /* Standard syntax; must be last */
 }
 /* Backgrounds */
 
