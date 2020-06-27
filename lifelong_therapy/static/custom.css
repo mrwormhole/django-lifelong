@@ -72,19 +72,19 @@
 .purple-gradient-background {
     background-color: #B000F7; /* fallback color if gradients are not supported */
     color: #FFF;
-    background-image: -webkit-linear-gradient(bottom, rgb(255,110,196) 0%, rgb(143,139,247) 100%); /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
-    background-image:    -moz-linear-gradient(to bottom, rgb(255,110,196) 0%, rgb(143,139,247) 100%); /* For Firefox (3.6 to 15) */
-    background-image:      -o-linear-gradient(to bottom, rgb(255,110,196) 0%, rgb(143,139,247) 100%); /* For old Opera (11.1 to 12.0) */ 
-    background-image:         linear-gradient(to bottom, rgb(255,110,196) 0%, rgb(143,139,247) 100%); /* Standard syntax; must be last */
+    background: -webkit-linear-gradient(bottom, rgba(255,110,196,255), rgba(143,139,247,255)); /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
+    background:    -moz-linear-gradient(to bottom, rgba(255,110,196,255), rgba(143,139,247,255)); /* For Firefox (3.6 to 15) */
+    background:      -o-linear-gradient(to bottom, rgba(255,110,196,255), rgba(143,139,247,255)); /* For old Opera (11.1 to 12.0) */ 
+    background:         linear-gradient(to bottom, rgba(255,110,196,255), rgba(143,139,247,255)); /* Standard syntax; must be last */
 }
 
 .blue-gradient-background {
     background-color: #45cafc; /* fallback color if gradients are not supported */
     color: #FFF;
-    background-image: -webkit-linear-gradient(top, rgb(69,202,252) 0%, rgb(48,63,159) 100%);
-    background-image:    -moz-linear-gradient(to top, rgb(69,202,252) 0%, rgb(48,63,159) 100%); /* For Firefox (3.6 to 15) */
-    background-image:      -o-linear-gradient(to top, rgb(69,202,252) 0%, rgb(48,63,159) 100%); /* For old Opera (11.1 to 12.0) */ 
-    background-image:         linear-gradient(to top, rgb(69,202,252) 0%, rgb(48,63,159) 100%); /* Standard syntax; must be last */
+    background: -webkit-linear-gradient(top, rgba(69,202,252), rgba(48,63,159));
+    background:    -moz-linear-gradient(to top, rgba(69,202,252), rgba(48,63,159)); /* For Firefox (3.6 to 15) */
+    background:      -o-linear-gradient(to top, rgba(69,202,252), rgba(48,63,159)); /* For old Opera (11.1 to 12.0) */ 
+    background:         linear-gradient(to top, rgba(69,202,252), rgba(48,63,159)); /* Standard syntax; must be last */
 }
 /* Backgrounds */
 
