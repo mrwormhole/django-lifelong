@@ -1,28 +1,34 @@
 <div class="container my-5" id="cards">
-    <h6 class="font-weight-bold text-center grey-text text-uppercase small mb-4">Services</h6>
-    <h3 class="font-weight-bold text-center dark-grey-text pb-2">Offering Wide Range of Services</h3>
+    
+    {% if lang == "tr" %}
+      <h6 class="font-weight-bold text-center grey-text text-uppercase small mb-4">Servisler</h6>
+      <h3 class="font-weight-bold text-center dark-grey-text pb-2">Geniş Hizmet Fırsatları </h3>
+    {% else %}
+      <h6 class="font-weight-bold text-center grey-text text-uppercase small mb-4">Services</h6>
+      <h3 class="font-weight-bold text-center dark-grey-text pb-2">Offering Wide Range of Services</h3>
+    {% endif %}
     <hr class="w-header my-4">
     <p class="lead text-center text-muted pt-2 mb-5"></p>
   
     <div class="row">
       <div class="col-md-6 col-xl-6 mb-4 d-flex align-items-stretch">
-        {% include 'components/serviceCard.html' with cardImage="/static/individual-counselling.png" cardTitle="Individual Counselling" cardText="Some quick example text to build on the card title and make up the bulk of the card's content!" slug="individual-counselling" %}
+        {% include 'components/serviceCard.html' with lang=lang cardImage="/static/individual-counselling.png" cardTitle="Individual Counselling" cardTitleTR="Bireysel Danışmanlık" cardText="Some quick example text to build on the card title and make up the bulk of the card's content!" slug="individual-counselling" %}
       </div>
   
       <div class="col-md-6 col-xl-6 mb-4 d-flex align-items-stretch">
-        {% include 'components/serviceCard.html' with cardImage="/static/family-counselling.png" cardTitle="Family Counselling" cardText="Some quick example text to build on the card title and make up the bulk of the card's content!" slug="family-counselling" %}
+        {% include 'components/serviceCard.html' with lang=lang cardImage="/static/family-counselling.png" cardTitle="Family Counselling" cardTitleTR="Aile Danışmanlığı" cardText="Some quick example text to build on the card title and make up the bulk of the card's content!" slug="family-counselling" %}
       </div>
   
       <div class="col-md-6 col-xl-4 mb-4 d-flex align-items-stretch">
-        {% include 'components/serviceCard.html' with cardImage="/static/marriage-counselling.png" cardTitle="Couples and Marriage Counselling" cardText="Some quick example text to build on the card title and make up the bulk of the card's content!" slug="couples-and-marriage-counselling" %}
+        {% include 'components/serviceCard.html' with lang=lang cardImage="/static/marriage-counselling.png" cardTitle="Couples and Marriage Counselling" cardTitleTR="Çift ve Evlilik Danışmanlığı" cardText="Some quick example text to build on the card title and make up the bulk of the card's content!" slug="couples-and-marriage-counselling" %}
       </div>
   
       <div class="col-md-6 col-xl-4 mb-4 d-flex align-items-stretch">
-          {% include 'components/serviceCard.html' with cardImage="/static/addiction-counselling.png" cardTitle="Addiction Counselling" cardText="Some quick example text to build on the card title and make up the bulk of the card's content!" slug="addiction-counselling" %}
+          {% include 'components/serviceCard.html' with lang=lang cardImage="/static/addiction-counselling.png" cardTitle="Addiction Counselling" cardTitleTR="Bağımlılık Danışmanlığı" cardText="Some quick example text to build on the card title and make up the bulk of the card's content!" slug="addiction-counselling" %}
       </div>
   
       <div class="col-md-6 col-xl-4 mb-4 d-flex align-items-stretch">
-        {% include 'components/serviceCard.html' with cardImage="/static/adolescent-counselling.png" cardTitle="Adolescent Counselling" cardText="Some quick example text to build on the card title and make up the bulk of the card's content!" slug="adolescent-counselling" %}
+        {% include 'components/serviceCard.html' with lang=lang cardImage="/static/adolescent-counselling.png" cardTitle="Adolescent Counselling" cardTitleTR="Genç Danışmanlığı" cardText="Some quick example text to build on the card title and make up the bulk of the card's content!" slug="adolescent-counselling" %}
       </div>    
     </div>
   </div>

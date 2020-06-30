@@ -4,10 +4,17 @@
     <!-- Card content -->
     <div class="card-body text-center">
         <!-- Title -->
-        <h4 class="card-title py-2 big-font"><a>{{cardTitle}}</a></h4>
+        
+        {% if lang == "tr" %}
+            <h4 class="card-title py-2 big-font"><a>{{cardTitleTR}}</a></h4>
+            <a type="button" href="{% url 'services' slug %}" class="btn blue-gradient-background btn-rounded"><i class="fas fa-caret-right mr-2" aria-hidden="true"></i>DETAYLAR</a>
+        {% else %}
+            <h4 class="card-title py-2 big-font"><a>{{cardTitle}}</a></h4>
+            <a type="button" href="{% url 'services' slug %}" class="btn blue-gradient-background btn-rounded"><i class="fas fa-caret-right mr-2" aria-hidden="true"></i>DETAILS</a>
+        {% endif %}
         <!-- Text -->
         <!--<p class="card-text mb-3">{{cardText}}</p>-->
         <!-- Button -->
-        <a type="button" href="{% url 'services' slug %}" class="btn blue-gradient-background btn-rounded"><i class="fas fa-caret-right mr-2" aria-hidden="true"></i>Details</a>
+        
     </div>
 </div>

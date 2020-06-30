@@ -20,8 +20,16 @@
                     <img class="d-block img-fluid" src="{% static "carousel-logo.png" %}" alt="test" width="150" >
                 </div>
                 <h1 class="h1-responsive" id="carousel-header"> Lifelong Counselling </h1>
-                <h4 class="h4-responsive mb-md-5" id="carousel-subheader"> Psychology Center in London </h3>
-                <p class="mb-md-5" id="carousel-info">We are long-established by professional therapist experts, psychologists and a psychiatrist, providing care for individuals and organisations both privately and online.  </p>
+                
+                
+                {% if lang == "tr" %}
+                    <h4 class="h4-responsive mb-md-5" id="carousel-subheader"> Londra'da Psikoloji Merkezi </h3>
+                    <p class="mb-md-5" id="carousel-info">Profesyonel terapist uzmanları, psikologlar ve psikiyatrist tarafından özel ve çevrimiçi olarak bireylere ve kuruluşlara uzun zamandır hizmet sağlıyoruz. </p>
+                {% else %}
+                    <h4 class="h4-responsive mb-md-5" id="carousel-subheader"> Psychology Center in London </h3>
+                    <p class="mb-md-5" id="carousel-info">We are long-established by professional therapist experts, psychologists and a psychiatrist, providing care for individuals and organisations both privately and online.  </p>
+                {% endif %}
+                    
             </div>
         </div>
         <div class="carousel-item">
@@ -35,8 +43,15 @@
                     <img class="d-block img-fluid" src="{% static "carousel-logo.png" %}" alt="test" width="150" >
                 </div>
                 <h1 class="h1-responsive" id="carousel-header"> Lifelong Counselling </h1>
-                <h4 class="h4-responsive mb-md-5" id="carousel-subheader"> Access to counselling from anywhere </h3>
-                <p class="mb-md-5" id="carousel-info"> In the comfort of your home or our office which is located in UK, we offer face-to-face wide variety of counselling services for our clients across Europe and the world.  </p>
+
+                {% if lang == "tr" %}
+                    <h4 class="h4-responsive mb-md-5" id="carousel-subheader"> Her Yerden Danışmanlık Hizmetlerine Erişim </h3>
+                    <p class="mb-md-5" id="carousel-info"> Evinizin veya Birleşik Krallık'ta bulunan ofisimizin rahatlığında, Avrupa ve dünya çapındaki müşterilerimiz için yüz yüze çok çeşitli danışmanlık hizmetleri sunuyoruz. </p>    
+                {% else %}
+                    <h4 class="h4-responsive mb-md-5" id="carousel-subheader"> Access to counselling from anywhere </h3>
+                    <p class="mb-md-5" id="carousel-info"> In the comfort of your home or our office which is located in UK, we offer face-to-face wide variety of counselling services for our clients across Europe and the world. </p>
+                {% endif %}
+                    
             </div>
         </div>
         <div class="carousel-item">
@@ -54,8 +69,14 @@
                     <img class="d-block img-fluid" src="{% static "carousel-logo.png" %}" alt="test" width="150" >
                 </div>
                 <h1 class="h1-responsive" id="carousel-header"> Lifelong Counselling </h1>
-                <h4 class="h4-responsive mb-md-5" id="carousel-subheader"> Wide range of counselling services </h3>
-                <p class="mb-md-5" id="carousel-info"> We are treating a range of disorders and emotional issues, offering CBT treatment near you for problems around work, depression, anxiety, OCD, PTSD, stress, panic.  </p>
+
+                {% if lang == "tr" %}
+                    <h4 class="h4-responsive mb-md-5" id="carousel-subheader"> Çok Çeşitli Danışmanlık Hizmetleri </h3>
+                    <p class="mb-md-5" id="carousel-info"> İş, depresyon, anksiyete, OKB, TSSB, stres, panik gibi problemler için size en yakın CBT tedavisi sunan çeşitli bozuklukları ve duygusal sorunları tedavi ediyoruz.  </p>
+                {% else %}
+                    <h4 class="h4-responsive mb-md-5" id="carousel-subheader"> Wide range of counselling services </h3>
+                    <p class="mb-md-5" id="carousel-info"> We are treating a range of disorders and emotional issues, offering CBT treatment near you for problems around work, depression, anxiety, OCD, PTSD, stress, panic.  </p>
+                {% endif %}
             </div>
         </div>
 

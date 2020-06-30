@@ -3,7 +3,13 @@
       <span class="ml-2 ruby-color"><i class="{{iconName}}"></i></span>
     </div>
     <div class="media-body py-1 pr-2" style="line-height: 1.5rem;">
-      <h6 class="font-weight-bold">{{featureTitle}}</h6>
-      <p class="pt-1">{{featureText}}</p>
+      
+      {% if lang == "tr" %}
+        <h6 class="font-weight-bold">{{featureTitleTR}}</h6>
+        <p class="pt-1">{{featureTextTR}}</p>
+      {% else %}
+        <h6 class="font-weight-bold">{{featureTitle}}</h6>
+        <p class="pt-1">{{featureText}}</p>
+      {% endif %}
     </div>
   </div>

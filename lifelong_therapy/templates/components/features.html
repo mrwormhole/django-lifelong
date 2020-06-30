@@ -1,27 +1,32 @@
 <div class="blue-gradient">
     <div class="container  my-5 p-5">
-  
-      <h6 class="font-weight-bold text-center text-light text-uppercase small mb-4">About</h6>
-      <h3 class="font-weight-bold text-center white-text pb-2">Why Should You Choose Us?</h3>
+      
+      {% if lang == "tr" %}
+        <h6 class="font-weight-bold text-center text-light text-uppercase small mb-4">Hakkında</h6>
+        <h3 class="font-weight-bold text-center white-text pb-2">Neden Bizi Tercih Etmelisiniz?</h3>
+      {% else %}
+        <h6 class="font-weight-bold text-center text-light text-uppercase small mb-4">About</h6>
+        <h3 class="font-weight-bold text-center white-text pb-2">Why Should You Choose Us?</h3>
+      {% endif %}
       <hr class="w-header white my-4">
       <p class="lead text-center text-muted pt-2 mb-5"></p>
   
       <div class="row white-text">
   
         <div class="col-md-6 col-xl-3 mb-4 d-flex align-items-stretch">
-          {% include 'components/feature.html' with iconName="icon-fa fas fa-life-ring fa-2x" featureTitle="Common Conditions" featureText="Depression, stress, anxiety, trauma, eating disorders,obesity, body image difficulties are just some of the conditions we can help with." %}
+          {% include 'components/feature.html' with lang=lang iconName="icon-fa fas fa-life-ring fa-2x" featureTitleTR="Yaygın Sorunlar" featureTitle="Common Conditions" featureTextTR="Depresyon, stres, anksiyete, travma, yeme bozuklukları, obezite, vücut imajı zorlukları yardımcı olabileceğimiz sorunlardan sadece birkaçıdır." featureText="Depression, stress, anxiety, trauma, eating disorders,obesity, body image difficulties are just some of the conditions we can help with." %}
         </div>
   
         <div class="col-md-6 col-xl-3 mb-4 d-flex align-items-stretch">
-          {% include 'components/feature.html' with iconName="icon-fa fas fa-puzzle-piece fa-2x" featureTitle="What We Offer" featureText="Offering face-to-face or online wide range of Individual, Couples, and Group Therapies, as well as Professional Trainings and Clinical Supervision." %}
+          {% include 'components/feature.html' with lang=lang iconName="icon-fa fas fa-puzzle-piece fa-2x" featureTitleTR="Neler Sağlıyoruz?" featureTitle="What We Offer?" featureTextTR="Yüz yüze veya çevrimiçi olarak bireysel, çift ve grup Terapilerinin yanı sıra mesleki eğitimler ve klinik denetimi sağlıyoruz." featureText="Offering face-to-face or online wide range of individual, couple, and group therapies as well as professional trainings and clinical supervision." %}
         </div>
   
         <div class="col-md-6 col-xl-3 mb-4 d-flex align-items-stretch">
-          {% include 'components/feature.html' with iconName="icon-fa fas fa-network-wired fa-2x" featureTitle="Meat The Team" featureText="Multi-disciplinary team made up of Psychiatrists, Psychologists, Psychotherapists." %}
+          {% include 'components/feature.html' with lang=lang iconName="icon-fa fas fa-network-wired fa-2x" featureTitleTR="Çevik Takımımız" featureTitle="Meat The Team" featureTextTR="Psikiyatristler, Psikologlar, Psikoterapistlerden oluşan çok disiplinli bir ekibe sahibiz." featureText="Multi-disciplinary team made up of Psychiatrists, Psychologists, Psychotherapists." %}
         </div>
   
         <div class="col-md-6 col-xl-3 mb-4 d-flex align-items-stretch">
-          {% include 'components/feature.html' with iconName="icon-fa fas fa-key fa-flip-horizontal fa-flip-vertical fa-2x" featureTitle="Accessing Our Services" featureText="Access our services by contacting us directly or making an appointment. We also accept referrals from other health practitioners including GPs and Psychiatrists." %}
+          {% include 'components/feature.html' with lang=lang iconName="icon-fa fas fa-key fa-flip-horizontal fa-flip-vertical fa-2x" featureTitleTR="Hizmetlerimize Erişim" featureTitle="Accesing Our Services" featureTextTR="Doğrudan bizimle iletişime geçerek veya randevu alarak hizmetlerimize erişin. Ayrıca, pratisyen hekimler ve psikiyatristler dahil olmak üzere diğer sağlık pratisyenlerinin önerdikleri kişileri de kabul ediyoruz." featureText="Access our services by contacting us directly or making an appointment. We also accept referrals from other health practitioners including GPs and Psychiatrists." %}
         </div>
   
       </div>

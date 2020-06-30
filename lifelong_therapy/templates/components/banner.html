@@ -3,9 +3,16 @@
       <img class="banner_img" src="/static/banner.png" alt="banner background">
     </div>
     <div class="banner_text">
-      <h3 class="banner-header"><i class="fas fa-calendar-day"></i> Free Online Appointment</h3>
-      <p class="banner-subheader">Fill out the form to arrange free 30 minutes consulting </p>
-      <a href="https://forms.gle/6VnAwZCqbwWc3tCx7" class="btn btn-white btn-shadow"><i class="fas fa-caret-right"></i> Begin</a>
+      
+      {% if lang == "tr" %}
+        <h3 class="banner-header"><i class="fas fa-calendar-day"></i> Ücretsiz Online Randevu</h3>
+        <p class="banner-subheader"> 30 dakikalık ücretsiz danışmanlık hizmeti için formu doldurun </p>
+        <a href="https://forms.gle/6VnAwZCqbwWc3tCx7" class="btn btn-white btn-shadow"><i class="fas fa-caret-right"></i> Başla</a>
+      {% else %}
+        <h3 class="banner-header"><i class="fas fa-calendar-day"></i> Free Online Appointment</h3>
+        <p class="banner-subheader">Fill out the form to arrange free 30 minutes consulting </p>
+        <a href="https://forms.gle/6VnAwZCqbwWc3tCx7" class="btn btn-white btn-shadow"><i class="fas fa-caret-right"></i> Begin</a>
+      {% endif %}
     </div>
     <svg class="curve-mask" preserveAspectRatio="none" viewBox="0 0 1024 96" xmlns="http://www.w3.org/2000/svg">
       <g id="Curve-Experiments" fill="none" fill-rule="evenodd">

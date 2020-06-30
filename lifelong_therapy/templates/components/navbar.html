@@ -12,32 +12,68 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown custom-item">
-                    <a class="nav-link dropdown-toggle custom-link" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">Services
-                    </a>
-                    <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-                        <a class="dropdown-item" style="color: #0094d9;font-family: 'Abril-Fatface', serif;" href="{% url 'services' name="addiction-counselling" %}">Addiction Counselling</a>
-                        <a class="dropdown-item" style="color: #0094d9;font-family: 'Abril-Fatface', serif;" href="{% url 'services' name="adolescent-counselling" %}">Adolescent Counselling</a>
-                        <a class="dropdown-item" style="color: #0094d9;font-family: 'Abril-Fatface', serif;" href="{% url 'services' name="couples-and-marriage-counselling" %}">Couples and Marriage Counselling</a>
-                        <a class="dropdown-item" style="color: #0094d9;font-family: 'Abril-Fatface', serif;" href="{% url 'services' name="family-counselling" %}">Family Counselling</a>
-                        <a class="dropdown-item" style="color: #0094d9;font-family: 'Abril-Fatface', serif;" href="{% url 'services' name="individual-counselling" %}">Individual Counselling</a>                     
-                    </div>
+                    {% if lang == "tr" %}
+                        <a class="nav-link dropdown-toggle custom-link" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Servisler
+                        </a>
+                        <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+                            <a class="dropdown-item" style="color: #0094d9;font-family: 'Abril-Fatface', serif;" href="{% url 'services' name="addiction-counselling" %}">Bağımlılık Danışmanlığı</a>
+                            <a class="dropdown-item" style="color: #0094d9;font-family: 'Abril-Fatface', serif;" href="{% url 'services' name="adolescent-counselling" %}">Genç Danışmanlığı</a>
+                            <a class="dropdown-item" style="color: #0094d9;font-family: 'Abril-Fatface', serif;" href="{% url 'services' name="couples-and-marriage-counselling" %}">Çift ve Evlilik Danışmanlığı</a>
+                            <a class="dropdown-item" style="color: #0094d9;font-family: 'Abril-Fatface', serif;" href="{% url 'services' name="family-counselling" %}">Aile Danışmanlığı</a>
+                            <a class="dropdown-item" style="color: #0094d9;font-family: 'Abril-Fatface', serif;" href="{% url 'services' name="individual-counselling" %}">Bireysel Danışmanlık</a>                     
+                        </div>
+                    {% else %}
+                        <a class="nav-link dropdown-toggle custom-link" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Services
+                        </a>
+                        <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+                            <a class="dropdown-item" style="color: #0094d9;font-family: 'Abril-Fatface', serif;" href="{% url 'services' name="addiction-counselling" %}">Addiction Counselling</a>
+                            <a class="dropdown-item" style="color: #0094d9;font-family: 'Abril-Fatface', serif;" href="{% url 'services' name="adolescent-counselling" %}">Adolescent Counselling</a>
+                            <a class="dropdown-item" style="color: #0094d9;font-family: 'Abril-Fatface', serif;" href="{% url 'services' name="couples-and-marriage-counselling" %}">Couples and Marriage Counselling</a>
+                            <a class="dropdown-item" style="color: #0094d9;font-family: 'Abril-Fatface', serif;" href="{% url 'services' name="family-counselling" %}">Family Counselling</a>
+                            <a class="dropdown-item" style="color: #0094d9;font-family: 'Abril-Fatface', serif;" href="{% url 'services' name="individual-counselling" %}">Individual Counselling</a>                     
+                        </div>
+                    {% endif %}
                 </li>
                 <li class="nav-item custom-item">
-                    <a class="nav-link custom-link" href="{% url 'blog:index' %}">Blog
-                    </a>
+                    {% if lang == "tr" %}
+                        <a class="nav-link custom-link" href="{% url 'blog:index' %}">Blog</a>
+                    {% else %}
+                        <a class="nav-link custom-link" href="{% url 'blog:index' %}">Blog</a>
+                    {% endif %}
                 </li>
                 <li class="nav-item custom-item">
-                    <a class="nav-link custom-link" href="{% url 'about' %}">About</a>
+                    
+                    {% if lang == "tr" %}
+                        <a class="nav-link custom-link" href="{% url 'about' %}">Hakkında</a>
+                    {% else %}
+                        <a class="nav-link custom-link" href="{% url 'about' %}">About</a>
+                    {% endif %}
                 </li>
                 <li class="nav-item custom-item">
-                    <a class="nav-link custom-link" href="{% url 'contact' %}">Contact</a>
+                    
+                    {% if lang == "tr" %}
+                        <a class="nav-link custom-link" href="{% url 'contact' %}">İletişim</a>
+                    {% else %}
+                        <a class="nav-link custom-link" href="{% url 'contact' %}">Contact</a>
+                    {% endif %}
                 </li>
                 <li class="nav-item custom-item">
-                    <a class="nav-link custom-link" href="{% url 'online-therapy' %}">Online Therapy</a>
+
+                    {% if lang == "tr" %}
+                        <a class="nav-link custom-link" href="{% url 'online-therapy' %}">Online Terapi</a>
+                    {% else %}
+                        <a class="nav-link custom-link" href="{% url 'online-therapy' %}">Online Therapy</a>
+                    {% endif %}
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link custom-button" href="{% url 'appointment:index' %}"><i class="fas fa-calendar-alt"></i> Appointment</a>
+
+                    {% if lang == "tr" %}
+                        <a class="nav-link custom-button" href="{% url 'appointment:index' %}"><i class="fas fa-calendar-alt"></i> Randevu</a>
+                    {% else %}
+                        <a class="nav-link custom-button" href="{% url 'appointment:index' %}"><i class="fas fa-calendar-alt"></i> Appointment</a>
+                    {% endif %}
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto nav-flex-icons social-links">

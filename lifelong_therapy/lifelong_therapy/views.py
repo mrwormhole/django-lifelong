@@ -2,6 +2,18 @@ from django.shortcuts import render, redirect
 
 from blog.models import Subscriber, Post
 
+def language_picker(request,lang):
+    ### set cookie to that lang
+    ### redirect the person to that lang home page
+    if lang == "tr":
+        parentBase = "base_tr.html"
+        context = {"lang":lang, "parentBase": parentBase}
+    else:
+        parentBase = "base.html"
+        context = {"lang":lang, "parentBase": parentBase}
+
+    return render(request, "home/index.html", context)
+
 def home(request):
     if request.method == "POST":
         name = request.POST.get("name")
@@ -37,8 +49,10 @@ def home(request):
             subscriber.save()
 
         return redirect("home")
+
+    parentBase = "base.html"
     latest_post_list = Post.objects.order_by("-published_date")[:3]
-    context = {"latest_post_list": latest_post_list}
+    context = {"latest_post_list": latest_post_list, "parentBase": parentBase}
     return render(request, "home/index.html", context)
 
 def services(request, name):
@@ -83,7 +97,14 @@ def contact(request):
 
         return redirect("home")
 
-    context = {}
+    lang = "tr"
+    if lang == "tr":
+        parentBase = "base_tr.html"
+        context = {"lang":lang, "parentBase": parentBase}
+    else:
+        parentBase = "base.html"
+        context = {"lang":lang, "parentBase": parentBase}
+    
     return render(request, "home/contact.html", context)
 
 def online_therapy(request):

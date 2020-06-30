@@ -1,10 +1,16 @@
-{% extends "base.html" %}
+{% extends parentBase %}
 
-{% block title %} - Contact {% endblock %}
+{% block title %} 
+  {% if lang == "tr" %}
+    - Contact 
+  {% else %}
+    - İletişim 
+  {% endif %}
+{% endblock %}
 
 {% block contact %}
 
-{% include 'components/jumbotron.html' with headerTitle="Contact" %}
+{% include 'components/jumbotron.html' with headerTitleTR="İletişim" headerTitle="Contact" %}
 
 <div class="container mt-5">
       <div class="row dark-grey-text mb-5">
@@ -17,33 +23,66 @@
             <div class="card-body">
               <!-- Header -->
               <div class="form-header">
-                <h2 class="mt-2 font-weight-bold"><i class="fas fa-envelope fa-2x fa-pull-right fa-border" style="color:#0094d9"></i> Write to us</h2>
+                {% if lang == "tr" %}
+                  <h2 class="mt-2 font-weight-bold" style="color:#0094d9"><i class="fas fa-envelope fa-2x fa-pull-right fa-border"></i> Bize Yazın</h2>
+                {% else %}
+                  <h2 class="mt-2 font-weight-bold" style="color:#0094d9"><i class="fas fa-envelope fa-2x fa-pull-right fa-border"></i> Write to us</h2>
+                {% endif %}
               </div>
-              <p class="dark-grey-text py-2">If you have any questions or concerns, feel free to contact. We'll respond as soon as possible!</p>
-              <!-- Body -->
-              <div class="md-form">
-                <i class="fas fa-user prefix grey-text"></i>
-                <input type="text" name="name" id="form-name" class="form-control">
-                <label for="form-name">Your name</label>
-              </div>
-              <div class="md-form">
-                <i class="fas fa-envelope prefix grey-text"></i>
-                <input type="text" name="email" id="form-email" class="form-control">
-                <label for="form-email">Your email</label>
-              </div>
-              <div class="md-form">
-                <i class="fas fa-tag prefix grey-text"></i>
-                <input type="text" name="subject" id="form-Subject" class="form-control">
-                <label for="form-Subject">Subject</label>
-              </div>
-              <div class="md-form">
-                <i class="fas fa-pencil-alt prefix grey-text"></i>
-                <textarea id="form-text" name="message" class="form-control md-textarea" rows="3"></textarea>
-                <label for="form-text">Send message</label>
-              </div>
-              <div class="text-center">
-                <button type="submit" class="btn btn-lg custom-button"><i class="far fa-paper-plane"></i> Send</button>
-              </div>
+              {% if lang == "tr" %}
+                <p class="dark-grey-text py-2">Herhangi bir sorunuz veya endişeniz varsa, bizimle iletişime geçmekten çekinmeyin. En kısa zamanda cevap vereceğiz!</p>
+                <!-- Body -->
+                <div class="md-form">
+                  <i class="fas fa-user prefix grey-text"></i>
+                  <input type="text" name="name" id="form-name" class="form-control">
+                  <label for="form-name">İsminiz</label>
+                </div>
+                <div class="md-form">
+                  <i class="fas fa-envelope prefix grey-text"></i>
+                  <input type="text" name="email" id="form-email" class="form-control">
+                  <label for="form-email">Email</label>
+                </div>
+                <div class="md-form">
+                  <i class="fas fa-tag prefix grey-text"></i>
+                  <input type="text" name="subject" id="form-Subject" class="form-control">
+                  <label for="form-Subject">Konu</label>
+                </div>
+                <div class="md-form">
+                  <i class="fas fa-pencil-alt prefix grey-text"></i>
+                  <textarea id="form-text" name="message" class="form-control md-textarea" rows="3"></textarea>
+                  <label for="form-text">Gönderilecek Mesaj</label>
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-lg custom-button"><i class="far fa-paper-plane"></i> Gönder</button>
+                </div>
+              {% else %}
+                <p class="dark-grey-text py-2">If you have any questions or concerns, feel free to contact. We'll respond as soon as possible!</p>
+                <!-- Body -->
+                <div class="md-form">
+                  <i class="fas fa-user prefix grey-text"></i>
+                  <input type="text" name="name" id="form-name" class="form-control">
+                  <label for="form-name">Your name</label>
+                </div>
+                <div class="md-form">
+                  <i class="fas fa-envelope prefix grey-text"></i>
+                  <input type="text" name="email" id="form-email" class="form-control">
+                  <label for="form-email">Your email</label>
+                </div>
+                <div class="md-form">
+                  <i class="fas fa-tag prefix grey-text"></i>
+                  <input type="text" name="subject" id="form-Subject" class="form-control">
+                  <label for="form-Subject">Subject</label>
+                </div>
+                <div class="md-form">
+                  <i class="fas fa-pencil-alt prefix grey-text"></i>
+                  <textarea id="form-text" name="message" class="form-control md-textarea" rows="3"></textarea>
+                  <label for="form-text">Send message</label>
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-lg custom-button"><i class="far fa-paper-plane"></i> Send</button>
+                </div>
+              {% endif %}
+              
             </div>
           </form>
           <!-- Form with header -->
@@ -64,28 +103,28 @@
           <div class="row text-center">
             <div class="col-md-3">
               <a class="btn-floating btn-lg blue-gradient-background">
-                <i class="fas fa-map-marker-alt"></i>
+                <i class="fas fa-map-marker-alt" style="color: #ffffff"></i>
               </a>
               <p>87A High Road, Wood Green N22 6BB, UK</p>
              
             </div>
             <div class="col-md-3">
                 <a class="btn-floating btn-lg blue-gradient-background">
-                  <i class="fas fa-map-marker-alt"></i>
+                  <i class="fas fa-map-marker-alt" style="color: #ffffff"></i>
                 </a>
                 <p>2 John Street, Holborn WC1N 2ES, UK</p>
               </div>
             <div class="col-md-3">
               <a class="btn-floating btn-lg blue-gradient-background">
-                <i class="fas fa-phone"></i>
+                <i class="fas fa-phone" style="color: #ffffff"></i>
               </a>
               <p>+44 2034 178200 <br> Mon - Fri, 9:00-17:00 </p>
             </div>
             <div class="col-md-3">
               <a class="btn-floating btn-lg blue-gradient-background">
-                <i class="fas fa-envelope"></i>
+                <i class="fas fa-envelope" style="color: #ffffff"></i>
               </a>
-              <p>info@lifelongtherapy.com <br> sale@gmail.com </p>
+              <p>info@lifelongtherapy.com <br> lifelongtherapy@gmail.com </p>
             </div>
           </div>
 

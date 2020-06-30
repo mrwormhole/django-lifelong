@@ -5,6 +5,7 @@ from django.conf import settings
 from . import views
 
 urlpatterns = [
+    path("lang/<slug:lang>",views.language_picker, name="language-picker"),
     path("", views.home, name="home"),
     path("online-therapy/", views.online_therapy, name="online-therapy"),
     path("contact/", views.contact, name="contact"),

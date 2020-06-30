@@ -1,5 +1,10 @@
 <div class="jumbotron" id="geopattern">
     <div class="text-white text-center py-0 px-4" id="push-down-under-nav">
-        <h1 class="card-title h1-responsive pt-3 mb-3 font-bold big-font"><strong>{{headerTitle}}</strong></h1>
+        
+        {% if lang == "tr" %}
+            <h1 class="card-title h1-responsive pt-3 mb-3 font-bold big-font"><strong>{{headerTitleTR}}</strong></h1>
+        {% else %}
+            <h1 class="card-title h1-responsive pt-3 mb-3 font-bold big-font"><strong>{{headerTitle}}</strong></h1>
+        {% endif %}
     </div>
 </div>
