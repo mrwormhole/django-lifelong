@@ -1,7 +1,13 @@
-{% extends "base.html" %}
+{% extends parentBase %}
 {% load static %}
 
-{% block title %} - Services {% endblock %}
+{% block title %} 
+  {% if lang == "tr" %}
+    - Services
+  {% else %}
+    - Services
+  {% endif %}
+{% endblock %}
 
 {% block services %}
 

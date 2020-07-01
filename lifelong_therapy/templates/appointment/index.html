@@ -1,9 +1,15 @@
-{% extends 'base.html' %}
+{% extends parentBase %}
 
-{% block title %} - Appointment {% endblock %}
+{% block title %} 
+  {% if lang == "tr" %}
+    - Randevu
+  {% else %}
+    - Appointment
+  {% endif %}
+{% endblock %}
 
 {% block appointment %}
-    {% include 'components/jumbotron.html' with headerTitle="Appointment" %}
+    {% include 'components/jumbotron.html' with headerTitleTR="Randevu" headerTitle="Appointment" %}
     <div class="dark-blue-background">
         {% include 'components/appointmentForm.html' %}
     </div>

@@ -1,8 +1,15 @@
 /* Navbar component styling */
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 0.25rem;
+        padding-left: 0.25rem;
+    }
+}
+
 .custom-navbar {
     background-color: #fff !important;
-    padding-left: 1.0rem !important;
-    padding-right: 1.0rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
 }
 
 .custom-item {
@@ -67,6 +74,10 @@
 
 .small-font {
     font-family: "Montserrat",sans-serif;
+}
+
+strong {
+    font-weight: 700 !important;
 }
 
 .purple-gradient-background {
@@ -407,8 +418,8 @@
 	position:fixed;
 	width:60px;
 	height:60px;
-	bottom:40px;
-	right:40px;
+	bottom:20px;
+	right:20px;
 	background-color:#53946F;
 	color:#FFF;
 	border-radius:50px;

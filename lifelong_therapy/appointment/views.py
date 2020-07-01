@@ -47,7 +47,15 @@ def index(request):
 
     #therapists_list = Therapist.objects.all
     #context = {"therapists_list": therapists_list}
-    context = {}
+    request.session.setdefault("lang", "en")
+    lang = request.session["lang"]
+    if lang == "tr":
+        parentBase = "base_tr.html"
+        context = {"lang":lang, "parentBase": parentBase}
+    else:
+        parentBase = "base.html"
+        context = {"lang":lang, "parentBase": parentBase}
+        
     return render(request, "appointment/index.html", context)
 
 def appointment_schedule_times(request):

@@ -6,35 +6,75 @@
                 {% csrf_token %}
                 <!-- progressbar -->
                 <ul id="progressbar">
-                    <li class="active">Personal Details</li>
-                    <li>Appointment Date</li>
-                    <li>Appointment Time</li>
+                    
+                    {% if lang == "tr" %}
+                        <li class="active"> Kişisel Detaylar</li>
+                        <li>Randevu Tarih</li>
+                        <li>Randevu Zaman</li>
+                    {% else %}
+                        <li class="active">Personal Details</li>
+                        <li>Appointment Date</li>
+                        <li>Appointment Time</li>
+                    {% endif %}
                 </ul>
                 <!-- fieldsets -->
                 <fieldset>
-                    <h2 class="fs-title">Personal Details</h2>
-                    <!--<h3 class="fs-subtitle">Tell us something more about you</h3>-->
-                    <input type="text" name="fullname" placeholder="Full Name"/>
-                    <input type="text" name="email" placeholder="Email"/>
-                    <input type="text" name="phone" placeholder="Phone"/>
                     
-                    <input type="button" name="next" class="next action-button" value="Next"/>
+                    {% if lang == "tr" %}
+                        <h2 class="fs-title">Kişisel Detaylar</h2>
+                        <!--<h3 class="fs-subtitle">Tell us something more about you</h3>-->
+                        <input type="text" name="fullname" placeholder="Ad Soyad"/>
+                        <input type="text" name="email" placeholder="Email"/>
+                        <input type="text" name="phone" placeholder="Telefon"/>
+                        
+                        <input type="button" name="next" class="next action-button" value="İlerle"/>
+                    {% else %}
+                        <h2 class="fs-title">Personal Details</h2>
+                        <!--<h3 class="fs-subtitle">Tell us something more about you</h3>-->
+                        <input type="text" name="fullname" placeholder="Full Name"/>
+                        <input type="text" name="email" placeholder="Email"/>
+                        <input type="text" name="phone" placeholder="Phone"/>
+                        
+                        <input type="button" name="next" class="next action-button" value="Next"/>    
+                    {% endif %}    
+                    
                 </fieldset>
                 <fieldset>
-                    <h2 class="fs-title">Appointment Date</h2>
-                    <!--<h3 class="fs-subtitle">Your presence on the social network</h3>--> 
-                
-                    <p><i class="fas fa-clock"></i> 50 mins</p>
-                    <p><i class="fas fa-user"></i> 1 person</p>
-                    <p style="padding-bottom: 20px;"><i class="fas fa-map-marker-alt"></i> LifeLong London, UK </p>
-                    <input type="text" id="datepicker" name="date" placeholder="Date">
+                    
+                    {% if lang == "tr" %}
+                        <h2 class="fs-title">Randevu Tarih</h2>
+                        <!--<h3 class="fs-subtitle">Your presence on the social network</h3>--> 
+                    
+                        <p><i class="fas fa-clock"></i> 50 dakika</p>
+                        <p><i class="fas fa-user"></i> 1 kişi</p>
+                        <p style="padding-bottom: 20px;"><i class="fas fa-map-marker-alt"></i> LifeLong London, UK </p>
+                        <input type="text" id="datepicker" name="date" placeholder="Tarih">
 
-                    <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
-                    <input type="button" name="next" class="next action-button get-time-button" value="Next"/>
+                        <input type="button" name="previous" class="previous action-button-previous" value="Geri"/>
+                        <input type="button" name="next" class="next action-button get-time-button" value="İlerle"/>
+                    {% else %}
+                        <h2 class="fs-title">Appointment Date</h2>
+                        <!--<h3 class="fs-subtitle">Your presence on the social network</h3>--> 
+                    
+                        <p><i class="fas fa-clock"></i> 50 mins</p>
+                        <p><i class="fas fa-user"></i> 1 person</p>
+                        <p style="padding-bottom: 20px;"><i class="fas fa-map-marker-alt"></i> LifeLong London, UK </p>
+                        <input type="text" id="datepicker" name="date" placeholder="Date">
+
+                        <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                        <input type="button" name="next" class="next action-button get-time-button" value="Next"/>
+                    {% endif %}
+        
                 </fieldset>
                 <fieldset>
-                    <h2 class="fs-title">Appointment Time</h2>
-                    <!--<h3 class="fs-subtitle">Fill in your credentials</h3>-->
+                    
+                    {% if lang == "tr" %}
+                        <h2 class="fs-title">Randevu Zaman</h2>
+                        <!--<h3 class="fs-subtitle">Fill in your credentials</h3>-->
+                    {% else %}
+                        <h2 class="fs-title">Appointment Time</h2>
+                        <!--<h3 class="fs-subtitle">Fill in your credentials</h3>-->
+                    {% endif %}
 
                     <!-- Group of default radios - option 1 -->
                     <div class="custom-control custom-radio">

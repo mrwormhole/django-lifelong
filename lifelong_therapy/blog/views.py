@@ -1,6 +1,7 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import get_object_or_404, redirect, render
 
 from .models import Author, Post, Subscriber
+from django.http import Http404
 
 # Get authors and display them
 def index(request):
@@ -32,8 +33,17 @@ def index(request):
         subscriber.save()
 
         return redirect("home")
+        
     latest_post_list = Post.objects.order_by("-published_date")
-    context = {"latest_post_list": latest_post_list}
+    request.session.setdefault("lang", "en")
+    lang = request.session["lang"]
+    if lang == "tr":
+        parentBase = "base_tr.html"
+        context = {"lang":lang, "parentBase": parentBase, "latest_post_list": latest_post_list}
+    else:
+        parentBase = "base.html"
+        context = {"lang":lang, "parentBase": parentBase, "latest_post_list": latest_post_list}
+    
     return render(request, "blog/index.html", context)
 
 # Show specific author and pots
@@ -67,7 +77,16 @@ def detail(request, post_id):
 
         return redirect("home")
     try:
-        post = Post.objects.get(pk=post_id)
-    except Post.DoesNotExists:
-        raise Http404("Post does not exist")
-    return render(request, "blog/detail.html", { "post": post })
+        # post = Post.objects.get(pk=post_id)
+        post = get_object_or_404(Post, pk=post_id)
+    except Http404:
+        return render(request, "404.html")
+    lang = request.session["lang"]
+    if lang == "tr":
+        parentBase = "base_tr.html"
+        context = {"lang":lang, "parentBase": parentBase, "post":post}
+    else:
+        parentBase = "base.html"
+        context = {"lang":lang, "parentBase": parentBase, "post":post}
+
+    return render(request, "blog/detail.html", context)

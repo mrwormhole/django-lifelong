@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends parentBase %}
 
 {% block title %} - Blog {% endblock %}
 
@@ -11,11 +11,20 @@
       <div class="row d-flex justify-content-center">
 
         <!--Grid column-->
-        <div class="col-lg-8 text-center">
+        <div class="col-lg-10 px-2 py-2">
 
-          <h3 class="font-weight-bold mb-4">{{post.post_header}}</h3>
-          <p>by <a class="font-weight-bold">{{post.author}}</a>, {{post.published_date}}</p>
-
+          <h3 class="font-weight-bold mb-4" style="font-size: 3rem;">
+            
+            {% if lang == "tr" %}
+              {{post.post_headerTR}}
+            </h3>
+            <p><span class="font-weight-bold" style="font-size: 1rem;">{{post.author}} tarafından</span>, {{post.published_date}} tarihinde yazıldı</p>
+            {% else %}
+              {{post.post_header}}
+            </h3>
+            <p>by <span class="font-weight-bold" style="font-size: 1rem;">{{post.author}}</span>, {{post.published_date}}</p>
+            {% endif %}
+                            
           <!--Image-->
           <div class="view overlay z-depth-1-half">
             <img src="{{post.post_image.url}}" class="img-fluid"
@@ -25,15 +34,18 @@
             </a>
           </div>
 
-          <p class="dark-grey-text">{{post.post_content|safe}}</p>
+          {% if lang == "tr" %}
+            <p class="dark-grey-text">{{post.post_contentTR|safe}}</p>
+          {% else %}
+            <p class="dark-grey-text">{{post.post_content|safe}}</p>
+          {% endif %}
 
         </div>
         <!--Grid column-->
 
       </div>
       <!--Grid row-->
-
-
+      
     </section>
 
   </div>

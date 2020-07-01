@@ -19,9 +19,18 @@
             <img class="card-img-top" src="{{article.post_image.url}}" alt="Card image cap">
             <!-- Card content -->
             <div class="card-body">
-              <a href="{% url "blog:detail" article.id %}" class="black-text" style="font-weight: bold;">{{article.post_header}}</a>
-              <p class="card-title text-muted font-small mt-3 mb-2">{{article.post_content|safe|slice:":100"}}...</p>
-              <a href="{% url "blog:detail" article.id %}" type="button" class="custom-button">Read more<i class="fa fa-angle-right ml-2"></i></a>
+              
+              {% if lang == "tr" %}
+                <a href="{% url "blog:detail" article.id %}" class="black-text" style="font-weight: bold;">{{article.post_headerTR}}</a>
+                <p class="card-title text-muted font-small mt-3 mb-2">{{article.post_contentTR|safe|slice:":100"}}...</p>
+                <a href="{% url "blog:detail" article.id %}" type="button" class="custom-button">Daha fazla oku<i class="fa fa-angle-right ml-2"></i></a>
+              {% else %}
+                <a href="{% url "blog:detail" article.id %}" class="black-text" style="font-weight: bold;">{{article.post_header}}</a>
+                <p class="card-title text-muted font-small mt-3 mb-2">{{article.post_content|safe|slice:":100"}}...</p>
+                <a href="{% url "blog:detail" article.id %}" type="button" class="custom-button">Read more<i class="fa fa-angle-right ml-2"></i></a>
+              {% endif %}
+                
+              
             </div>
           </div>
         </div>

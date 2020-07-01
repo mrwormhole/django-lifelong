@@ -3,16 +3,8 @@ from django.shortcuts import render, redirect
 from blog.models import Subscriber, Post
 
 def language_picker(request,lang):
-    ### set cookie to that lang
-    ### redirect the person to that lang home page
-    if lang == "tr":
-        parentBase = "base_tr.html"
-        context = {"lang":lang, "parentBase": parentBase}
-    else:
-        parentBase = "base.html"
-        context = {"lang":lang, "parentBase": parentBase}
-
-    return render(request, "home/index.html", context)
+    request.session["lang"] = lang
+    return redirect("home")
 
 def home(request):
     if request.method == "POST":
@@ -50,17 +42,36 @@ def home(request):
 
         return redirect("home")
 
-    parentBase = "base.html"
     latest_post_list = Post.objects.order_by("-published_date")[:3]
-    context = {"latest_post_list": latest_post_list, "parentBase": parentBase}
+    request.session.setdefault("lang", "en")
+    lang = request.session["lang"]
+    if lang == "tr":
+        parentBase = "base_tr.html"
+        context = {"lang":lang, "parentBase": parentBase, "latest_post_list": latest_post_list}
+    else:
+        parentBase = "base.html"
+        context = {"lang":lang, "parentBase": parentBase, "latest_post_list": latest_post_list}
+    
     return render(request, "home/index.html", context)
 
 def services(request, name):
-    context = {"slugName": name}
+    lang = request.session["lang"]
+    if lang == "tr":
+        parentBase = "base_tr.html"
+        context = {"lang":lang, "parentBase": parentBase, "slugName": name}
+    else:
+        parentBase = "base.html"
+        context = {"lang":lang, "parentBase": parentBase, "slugName": name}
     return render(request, "home/services.html", context)
 
 def about(request):
-    context = {}
+    lang = request.session["lang"]
+    if lang == "tr":
+        parentBase = "base_tr.html"
+        context = {"lang":lang, "parentBase": parentBase}
+    else:
+        parentBase = "base.html"
+        context = {"lang":lang, "parentBase": parentBase}
     return render(request, "home/about.html", context)
 
 def contact(request):
@@ -83,9 +94,9 @@ def contact(request):
             try:
                 sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
                 response = sg.send(message)
-                print(response.status_code)
-                print(response.body)
-                print(response.headers)
+                # print(response.status_code)
+                # print(response.body)
+                # print(response.headers)
             except Exception as e:
                 print(e.message)
             #####
@@ -97,7 +108,7 @@ def contact(request):
 
         return redirect("home")
 
-    lang = "tr"
+    lang = request.session["lang"]
     if lang == "tr":
         parentBase = "base_tr.html"
         context = {"lang":lang, "parentBase": parentBase}
@@ -108,5 +119,11 @@ def contact(request):
     return render(request, "home/contact.html", context)
 
 def online_therapy(request):
-    context = {}
+    lang = request.session["lang"]
+    if lang == "tr":
+        parentBase = "base_tr.html"
+        context = {"lang":lang, "parentBase": parentBase}
+    else:
+        parentBase = "base.html"
+        context = {"lang":lang, "parentBase": parentBase}
     return render(request, "home/onlineTherapy.html", context)

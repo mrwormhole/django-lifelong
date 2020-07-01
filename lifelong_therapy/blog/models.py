@@ -17,8 +17,10 @@ class Author(models.Model):
 
 class Post(models.Model):
     post_header = models.CharField(max_length = 200)
+    post_headerTR = models.CharField(max_length = 200, default="Türkçesi henüz eklenmedi")
     post_image = models.ImageField(blank=True)
     post_content = RichTextField(blank=True)
+    post_contentTR = RichTextField(blank=True, default="Türkçesi henüz eklenmedi")
     published_date = models.DateTimeField("date published")
     votes = models.IntegerField(default=0)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
