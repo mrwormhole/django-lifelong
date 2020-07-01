@@ -55,6 +55,10 @@ def home(request):
     return render(request, "home/index.html", context)
 
 def services(request, name):
+    slug_names = ["addiction-counselling", "adolescent-counselling", "couples-and-marriage-counselling", "family-counselling", "individual-counselling"]
+    if not(name in slug_names):
+        return render(request, "404.html")
+
     lang = request.session["lang"]
     if lang == "tr":
         parentBase = "base_tr.html"

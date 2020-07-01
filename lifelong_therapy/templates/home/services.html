@@ -15,7 +15,15 @@
         <!--Jumbotron-->
         <div class="jumbotron jumbotron-header mb-0" id="push-down-under-nav" style="background-image: url('/static/header-addiction-counselling.jpg');">
             <div class="text-white text-center py-0 px-4">
-                <h1 class="card-title h1-responsive font-bold mx-auto my-5 py-5 jumbotron-text"><strong>Addiction Counselling</strong></h1>
+                <h1 class="card-title h1-responsive font-bold mx-auto my-5 py-5 jumbotron-text">
+                    <strong>
+                        {% if lang == "tr" %}
+                            Bağımlılık Danışmanlığı
+                        {% else %}
+                            Addiction Counselling
+                        {% endif %}
+                    </strong>
+                </h1>
             </div>
         </div>
 
@@ -27,51 +35,96 @@
                 </div>
         
                 <div class="col-lg-5 mb-4 mb-lg-0">
-        
-                  <h3 class="font-weight-bold" style="color:#0094d9;">What includes Addiction Counselling?</h3>
-        
-                  <p class="font-weight-bold">Here is the list of a few topics that we look into</p>
                     
-                  <ul>
-                    <li>Substance use</li> 
-                    <li>  Alcohol and tobacco products addiction</li> 
-                    <li>Social media and internet addiction</li>
-                    <li>   Shopping addiction</li>
-                    <li>   Sexual addiction </li>
-                  </ul>
-                  <p class="text-muted">
-                    Being addicted is defines as Irrepressible desire towards an object, person or creature or going under domination of another will.
-                    <br>
-                    <br>
-                    Addiction makes you powerless, it is a situation which you cannot overcome without getting professional help and your willpower.
-                    <br>
-                    <br>
-                    Scientifically addiction is a chronic, bio-psycho-social brain disease. This situation is more of a family and community illness rather than an individuals illness.
-                    <br>
-                    <br>
-                    That’s why the therapy and treatment should involve the family, society and the individual with a wide range spectrum.
-                    <br>
-                    <br>
-                    In our centre our specialists provide education programs, counselling and addiction therapies for families and individuals.
-                    <br>
-                    <br>
-                    Substance use disorder (nicotine, marijuana, heroin, cocain etc.)
-                    <br>
-                    <br>
-                    Alcohol use disorder
-                    <br>
-                    <br>
-                    Technology addiction (internet, computer games, mobile phones etc.
-                    <br>
-                    <br>
-                    Gambling addiction
-                    <br>
-                    <br>
-                    Shopping addiction
-                  </p>
-        
-                  <a class="btn btn-lg font-weight-bold custom-button" href="#" >Learn more<i class="fas fa-angle-right ml-2"></i></a>
-        
+                    {% if lang == "tr" %}
+                        <h3 class="font-weight-bold" style="color:#0094d9;">Neler Bağımlılık Danışmanlığına Dahildir?</h3>
+            
+                        <p class="font-weight-bold">İşte ilgilendiğimiz konuların listesi</p>
+                        
+                        <ul>
+                        <li>Madde kullanımı</li> 
+                        <li>Alkol ve tütün ürünleri bağımlılığı</li> 
+                        <li>Sosyal medya ve internet bağımlılığı</li>
+                        <li>Alışveriş bağımlılığı</li>
+                        <li>Cinsel bağımlılık</li>
+                        </ul>
+                        <p class="text-muted">
+                        Bağımlı olmak, bir nesneye, kişiye veya yaratığa karşı bastırılamaz arzu veya başka bir iradenin egemenliğine girme olarak tanımlanır.
+                        <br>
+                        <br>
+                        Bağımlılık sizi güçsüz yapar, profesyonel yardım ve irade almadan üstesinden gelemeyeceğiniz bir durumdur.
+                        <br>
+                        <br>
+                        Bilimsel olarak bağımlılık kronik, biyo-psiko-sosyal bir beyin hastalığıdır. Bu durum, bireyin hastalığı olmaktan çok bir aile ve toplum hastalığıdır.
+                        <br>
+                        <br>
+                        Bu yüzden terapi ve tedavi aileyi, toplumu ve geniş bir yelpazeye sahip bireyi içermelidir
+                        <br>
+                        <br>
+                        Merkezimizde uzmanlarımız aileler ve bireyler için eğitim programları, danışmanlık ve bağımlılık terapileri sunmaktadır.Bağımlılık danışmanlığında başlıca çalıştığımız konular:
+                        <br>
+                        <br>
+                        Madde kullanım bozukluğu (nikotin, esrar, eroin, kokain vb.)
+                        <br>
+                        <br>
+                        Alkol kullanım bozukluğu
+                        <br>
+                        <br>
+                        Teknoloji bağımlılığı (internet, bilgisayar oyunları, cep telefonları vb.)
+                        <br>
+                        <br>
+                        Kumar bağımlılığı
+                        <br>
+                        <br>
+                        Alışveriş bağımlılığı
+                        </p>
+            
+                        <a class="btn btn-lg font-weight-bold custom-button" href="https://wa.me/447392206299" target=”_blank” >Daha Fazla Bilgi Al<i class="fas fa-angle-right ml-2"></i></a>
+                    {% else %}
+                        <h3 class="font-weight-bold" style="color:#0094d9;">What includes Addiction Counselling?</h3>
+                
+                        <p class="font-weight-bold">Here is the list of a few topics that we look into</p>
+                            
+                        <ul>
+                            <li>Substance use</li> 
+                            <li>Alcohol and tobacco products addiction</li> 
+                            <li>Social media and internet addiction</li>
+                            <li>Shopping addiction</li>
+                            <li> Sexual addiction </li>
+                        </ul>
+                        <p class="text-muted">
+                            Being addicted is defines as Irrepressible desire towards an object, person or creature or going under domination of another will.
+                            <br>
+                            <br>
+                            Addiction makes you powerless, it is a situation which you cannot overcome without getting professional help and your willpower.
+                            <br>
+                            <br>
+                            Scientifically addiction is a chronic, bio-psycho-social brain disease. This situation is more of a family and community illness rather than an individuals illness.
+                            <br>
+                            <br>
+                            That’s why the therapy and treatment should involve the family, society and the individual with a wide range spectrum.
+                            <br>
+                            <br>
+                            In our centre our specialists provide education programs, counselling and addiction therapies for families and individuals. Here are the topics we mostly deal with it everyday:
+                            <br>
+                            <br>
+                            Substance use disorder (nicotine, marijuana, heroin, cocain etc.)
+                            <br>
+                            <br>
+                            Alcohol use disorder
+                            <br>
+                            <br>
+                            Technology addiction (internet, computer games, mobile phones etc.)
+                            <br>
+                            <br>
+                            Gambling addiction
+                            <br>
+                            <br>
+                            Shopping addiction
+                        </p>
+                
+                        <a class="btn btn-lg font-weight-bold custom-button" href="https://wa.me/447392206299" target=”_blank” >Learn more<i class="fas fa-angle-right ml-2"></i></a>
+                    {% endif %}
                 </div>
               
             </div>
@@ -82,7 +135,15 @@
         <!--Jumbotron-->
         <div class="jumbotron jumbotron-header mb-0" id="push-down-under-nav" style="background-image: url('/static/header-adolescent-counselling.jpg');">
             <div class="text-white text-center py-0 px-4">
-                <h1 class="card-title h1-responsive font-bold mx-auto my-5 py-5 jumbotron-text"><strong>Adolescent Counselling</strong></h1>
+                <h1 class="card-title h1-responsive font-bold mx-auto my-5 py-5 jumbotron-text">
+                    <strong>
+                        {% if lang == "tr" %}
+                            Ergen Danışmanlığı
+                        {% else %}
+                            Adolescent Counselling
+                        {% endif %}
+                    </strong>
+                </h1>
             </div>
         </div>
 
@@ -94,48 +155,89 @@
                 </div>
         
                 <div class="col-lg-5 mb-4 mb-lg-0">
-        
-                  <h3 class="font-weight-bold" style="color:#0094d9;">What includes Adolescent Counselling?</h3>
-                    
-                  <p class="text-muted">
-                    Every phase of development in human life is important, but as adolescence is a phase which transforms an individual from being a child into youth it is highly important.
-                    <br>
-                    <br>
-                    In this phase the individual may have physical, social, mental and emotional hardship which may affect their adaptation into this phase as they won’t feel neither like a child nor like a youth anymore.
-                    <br>
-                    <br>
-                    As a result individuals may have identity confusion during this phase.
-                    <br>
-                    <br>
-                    As well as adolescents, families may have difficulties while trying to understand their children. During this phase families see that communication methods they have always used won’t work anymore, and sometimes feel helpless.
-                    <br>
-                    <br>
-                    In Lifelong Counselling Center, our Specialist Adolescence Counsellors provides support for adolescents individual development, their communication with friends and people around them, their school performance, and strengthening their communication with their parents therefore helping them to build better attachment within the family.
-                    <br>
-                    <br>
-                    The biggest benefit of adolescence counselling would be helping the adolescent to adapt to this phase which they feel confused and making their life easier in the future to become a successful individual.
-                  </p>
-
-                  <p class="font-weight-bold">Here is the list of a few topics that we look into</p>
-
-                  <ul>
-                    <li>Attention deficit and hyperactivity disorder (ADHD)</li> 
-                    <li>Issues with sexual development</li> 
-                    <li>Exam anxiety</li>
-                    <li>Learning difficulties</li>
-                    <li>Depression in adolescence</li>
-                    <li>Adaptation problems in adolescence</li>
-                    <li>Sleeping problems in adolescence</li>
-                    <li>Obsessive and compulsive behaviours in adolescence (OCD)</li>
-                    <li>Social phobia/ social anxiety</li>
-                    <li>Addiction in adolescence</li>
-                    <li>Deciding occupation and career</li>
-                    <li>Problems with family</li>
-                    <li>Problems with academic performance</li>
-                  </ul>
-
-        
-                  <a class="btn btn-lg font-weight-bold custom-button" href="#" >Learn more<i class="fas fa-angle-right ml-2"></i></a>
+                    {% if lang == "tr" %}
+                        <h3 class="font-weight-bold" style="color:#0094d9;">Neler Ergen Danışmanlığına Dahildir?</h3>
+                        
+                        <p class="text-muted">
+                        İnsan yaşamındaki gelişimin her aşaması önemlidir, ancak ergenlik bireyi çocuk olmaktan gençliğe dönüştüren bir aşama olduğu için çok önemlidir.
+                        <br>
+                        <br>
+                        Bu aşamada birey artık ne çocuk gibi ne de genç gibi hissetmeyecekleri için bu aşamaya uyumlarını etkileyebilecek fiziksel, sosyal, zihinsel ve duygusal zorluklara sahip olabilir.
+                        <br>
+                        <br>
+                        Sonuç olarak bireyler bu aşamada kimlik karmaşasına sahip olabilirler.
+                        <br>
+                        <br>
+                        Ergenlerin yanı sıra aileler çocuklarını anlamaya çalışırken zorluk çekebilirler. Bu aşamada aileler, her zaman kullandıkları iletişim yöntemlerinin artık işe yaramayacağını ve bazen çaresiz hissettiklerini görüyorlar.
+                        <br>
+                        <br>
+                        Danışmanlarımız, ergenlere bireysel gelişim, arkadaşlarıyla ve etrafındaki insanlarla iletişim kurmaları, okul performansları ve ebeveynleri ile iletişimlerini güçlendirmeleri için destek sağlar, bu nedenle aile içinde daha iyi bağ kurmalarını sağlar.
+                        <br>
+                        <br>
+                        Ergenlik danışmanlığının en büyük yararı, ergenin şaşkın hissettikleri bu aşamaya uyum sağlamasına yardımcı olmak ve gelecekte başarılı bir birey haline gelmelerini kolaylaştırmak olacaktır.
+                        </p>
+    
+                        <p class="font-weight-bold">Baktığımız problemlerin listesi:</p>
+    
+                        <ul>
+                        <li>Dikkat eksikliği ve hiperaktivite bozukluğu (DEHB)</li> 
+                        <li>Cinsel gelişim ile ilgili sorunlar</li> 
+                        <li>Sınav kaygısı</li>
+                        <li>Zorlukları öğrenmek</li>
+                        <li>Ergenlikte depresyon</li>
+                        <li>Ergenlikte uyum sorunları</li>
+                        <li>Ergenlikte uyku sorunları</li>
+                        <li>Ergenlikte obsesif ve kompulsif davranışlar (OKB)</li>
+                        <li>Sosyal fobi / sosyal kaygı</li>
+                        <li>Ergenlikte bağımlılık</li>
+                        <li>Meslek ve kariyere karar vermek</li>
+                        <li>Aile ile ilgili sorunlar</li>
+                        <li>Akademik performansla ilgili sorunlar</li>
+                        </ul>
+    
+                        <a class="btn btn-lg font-weight-bold custom-button" href="https://wa.me/447392206299" target=”_blank” >Daha Fazla Bilgi Al<i class="fas fa-angle-right ml-2"></i></a>
+                    {% else %}
+                        <h3 class="font-weight-bold" style="color:#0094d9;">What includes Adolescent Counselling?</h3>
+                        
+                        <p class="text-muted">
+                        Every phase of development in human life is important, but as adolescence is a phase which transforms an individual from being a child into youth it is highly important.
+                        <br>
+                        <br>
+                        In this phase the individual may have physical, social, mental and emotional hardship which may affect their adaptation into this phase as they won’t feel neither like a child nor like a youth anymore.
+                        <br>
+                        <br>
+                        As a result individuals may have identity confusion during this phase.
+                        <br>
+                        <br>
+                        As well as adolescents, families may have difficulties while trying to understand their children. During this phase families see that communication methods they have always used won’t work anymore, and sometimes feel helpless.
+                        <br>
+                        <br>
+                        In Lifelong Counselling Center, our Specialist Adolescence Counsellors provides support for adolescents individual development, their communication with friends and people around them, their school performance, and strengthening their communication with their parents therefore helping them to build better attachment within the family.
+                        <br>
+                        <br>
+                        The biggest benefit of adolescence counselling would be helping the adolescent to adapt to this phase which they feel confused and making their life easier in the future to become a successful individual.
+                        </p>
+    
+                        <p class="font-weight-bold">Here is the list of a few topics that we look into</p>
+    
+                        <ul>
+                        <li>Attention deficit and hyperactivity disorder (ADHD)</li> 
+                        <li>Issues with sexual development</li> 
+                        <li>Exam anxiety</li>
+                        <li>Learning difficulties</li>
+                        <li>Depression in adolescence</li>
+                        <li>Adaptation problems in adolescence</li>
+                        <li>Sleeping problems in adolescence</li>
+                        <li>Obsessive and compulsive behaviours in adolescence (OCD)</li>
+                        <li>Social phobia/ social anxiety</li>
+                        <li>Addiction in adolescence</li>
+                        <li>Deciding occupation and career</li>
+                        <li>Problems with family</li>
+                        <li>Problems with academic performance</li>
+                        </ul>
+    
+                        <a class="btn btn-lg font-weight-bold custom-button" href="https://wa.me/447392206299" target=”_blank” >Learn more<i class="fas fa-angle-right ml-2"></i></a>
+                    {% endif %}
         
                 </div>
               
@@ -147,7 +249,15 @@
         <!--Jumbotron-->
         <div class="jumbotron jumbotron-header mb-0" id="push-down-under-nav" style="background-image: url('/static/header-couples-and-marriage-counselling.jpg');">
             <div class="text-white text-center py-0 px-4">
-                <h1 class="card-title h1-responsive font-bold mx-auto my-5 py-5 jumbotron-text"><strong>Couples and Marriage Counselling</strong></h1>
+                <h1 class="card-title h1-responsive font-bold mx-auto my-5 py-5 jumbotron-text">
+                    <strong>
+                        {% if lang == "tr" %}
+                            Çift ve Evlilik Danışmanlığı
+                        {% else %}
+                            Couples and Marriage Counselling
+                        {% endif %}
+                    </strong>
+                </h1>
             </div>
         </div>
 
@@ -160,62 +270,120 @@
         
                 <div class="col-lg-5 mb-4 mb-lg-0">
         
-                  <h3 class="font-weight-bold" style="color:#0094d9;">What includes Couples and Marriage Counselling?</h3>
-                    
-                  <p class="text-muted">
-                    We give counselling to couples preparing for marriage. During this phase we offer professional support to them in making decisions and also enhance their communication techniques and skills.
-                    <br>
-                    <br>
-                    We offer support for the following; 
-                    <br>
-                    <ul>
-                        <li>Self-recognition</li> 
-                        <li>Getting to know your partner</li> 
-                        <li>Expressing yourself correctly</li>
-                        <li>Healthy and happy marriage</li>
-                        <li>Sexual Counselling</li>
-                        <li>Growing healthy kids and communication</li>
-                        <li>Maintaining a healthy and happy marriage</li>
-                    </ul>
-                    <br>
-                    Family, couple and marriage counselling works more towards the relationship rather than the individuals.
-                    <br>
-                    <br>
-                    There are lots of problems that can occur in family and relationships.
-                    <br>
-                    <br>
-                    Sometimes individuals may not be able to solve these problems in a healthy and right way. This may cause the problems to grow bigger and sometimes turning into a cycle that is difficult to break.
-                    <br>
-                    <br>
-                    In this instance for the couples to get professional help would be the most healthy step they can take.
-                    <br>
-                    <br>
-                    The couples who recieve professional help will be working with a counsellor who will provide them with an non-judgemental and  confidential environment where they are comfortable to be able to express their deep feelings and thoughts.
-                    <br>
-                  </p>
+                    {% if lang == "tr" %}
+                        <h3 class="font-weight-bold" style="color:#0094d9;">Neler Çift ve Evlilik Danışmanlığı Dahildir?</h3>
+                        
+                        <p class="text-muted">
+                        Evli ve Evlilik hazırlığı yapan çiftlere verdiğimiz danışmanlıkta başta karar vermede iletişim tekniklerini ve becerilerini geliştirmeye önem veriyoruz.
+                        <br>
+                        <br>
+                        Çalıştığımız başlıca konular: 
+                        <br>
+                        <ul>
+                            <li>Kendini tanıma</li> 
+                            <li>Eşinizi tanıma</li> 
+                            <li>Kendinizi doğru ifade etmek</li>
+                            <li>Sağlıklı ve mutlu evlilik</li>
+                            <li>Cinsel Danışmanlık</li>
+                            <li>Büyüyen sağlıklı çocuklar ve iletişim</li>
+                            <li>Sağlıklı ve mutlu bir evliliğin sürdürülmesi</li>
+                        </ul>
+                        <br>
+                        Aile, çift ve evlilik danışmanlığı, bireylerden ziyade ilişkiye yönelik olarak çalışır.
+                        <br>
+                        <br>
+                        Ailede ve ilişkilerde ortaya çıkabilecek birçok sorun vardır.
+                        <br>
+                        <br>
+                        Bazen bireyler bu sorunları sağlıklı ve doğru bir şekilde çözemeyebilirler. Bu, sorunların büyümesine ve bazen kırılması zor bir döngüye dönüşmesine neden olabilir.
+                        <br>
+                        <br>
+                        Bu durumda çiftlerin profesyonel yardım almaları için atabilecekleri en sağlıklı adım olacaktır.
+                        <br>
+                        <br>
+                        Profesyonel yardım alan çiftler, derin duygu ve düşüncelerini ifade edebilecekleri rahat ve yargılayıcı olmayan ve gizli bir ortam sağlayacak bir danışmanla çalışırlar.
+                        <br>
+                        </p>
+    
+                        <ul>
+                        <li>İlişkide kendilerini ifade edememek, anlaşılmış hissetmemek</li> 
+                        <li>Cinsel sorunlar</li> 
+                        <li>Eşe karşı sevgi hissetmemek</li>
+                        <li>Boşanma aşaması boyunca destek</li>
+                        <li>İlişkilerde sadakatsizlik ve terk edilme korkusu</li>
+                        <li>Büyüyen sağlıklı çocuklar ve iletişim</li>
+                        <li>Sağlıklı ve mutlu bir evliliğin sürdürülmesi</li>
+                        </ul>
+    
+                        <p class="text-muted">
+                        Bireylerin profesyonel yardım almak için büyük problemleri olması gerekmez.
+                        <br>
+                        <br>
+                        Bireyler mevcut ilişkilerini geliştirmek ve gelecekte ortaya çıkabilecek sorunları hazırlamak ve önlemek için profesyonel yardım alabilirler.
+                        <br>
+                        <br>
+                        Uzun vadede çiftler için terapinin en büyük katkısı daha iyi bir iletişim kurmak ve birbirlerine karşı daha anlayışlı olmaktır. Bu, gelecekte çift için oluşabilecek sorunlara da hazırlıktır.
+                        </p>
+    
+                        <a class="btn btn-lg font-weight-bold custom-button" href="https://wa.me/447392206299" target=”_blank” >Learn more<i class="fas fa-angle-right ml-2"></i></a>
+                    {% else %}
+                        <h3 class="font-weight-bold" style="color:#0094d9;">What includes Couples and Marriage Counselling?</h3>
+                        
+                        <p class="text-muted">
+                        We give counselling to couples preparing for marriage. During this phase we offer professional support to them in making decisions and also enhance their communication techniques and skills.
+                        <br>
+                        <br>
+                        We offer support for the following; 
+                        <br>
+                        <ul>
+                            <li>Self-recognition</li> 
+                            <li>Getting to know your partner</li> 
+                            <li>Expressing yourself correctly</li>
+                            <li>Healthy and happy marriage</li>
+                            <li>Sexual Counselling</li>
+                            <li>Growing healthy kids and communication</li>
+                            <li>Maintaining a healthy and happy marriage</li>
+                        </ul>
+                        <br>
+                        Family, couple and marriage counselling works more towards the relationship rather than the individuals.
+                        <br>
+                        <br>
+                        There are lots of problems that can occur in family and relationships.
+                        <br>
+                        <br>
+                        Sometimes individuals may not be able to solve these problems in a healthy and right way. This may cause the problems to grow bigger and sometimes turning into a cycle that is difficult to break.
+                        <br>
+                        <br>
+                        In this instance for the couples to get professional help would be the most healthy step they can take.
+                        <br>
+                        <br>
+                        The couples who recieve professional help will be working with a counsellor who will provide them with an non-judgemental and  confidential environment where they are comfortable to be able to express their deep feelings and thoughts.
+                        <br>
+                        </p>
 
-                  <ul>
-                    <li>Unable to express themselves within the relationship,not feeling understood</li> 
-                    <li>Sexual problems</li> 
-                    <li>Not feeling love for partner</li>
-                    <li>Support through divorce phase</li>
-                    <li>Disloyalty in relationships and scare of abandonment</li>
-                    <li>Growing healthy kids and communication</li>
-                    <li>Maintaining a healthy and happy marriage</li>
-                  </ul>
+                        <ul>
+                            <li>Unable to express themselves within the relationship,not feeling understood</li> 
+                            <li>Sexual problems</li> 
+                            <li>Not feeling love for partner</li>
+                            <li>Support through divorce phase</li>
+                            <li>Disloyalty in relationships and scare of abandonment</li>
+                            <li>Growing healthy kids and communication</li>
+                            <li>Maintaining a healthy and happy marriage</li>
+                        </ul>
 
-                  <p class="text-muted">
-                    Individuals do not have to have major problems in order to seek professional help.
-                    <br>
-                    <br>
-                    Individuals can get professional help to enhance their existing relationship, and to prepare and prevent the problems that can occur in the future.
-                    <br>
-                    <br>
-                    In long term the biggest contribution of the therapy for the couples is having a better communication and being more understanding towards one another. This is  also preparation for the problems that may occur in the future for the couple.
-                  </p>
+                        <p class="text-muted">
+                            Individuals do not have to have major problems in order to seek professional help.
+                            <br>
+                            <br>
+                            Individuals can get professional help to enhance their existing relationship, and to prepare and prevent the problems that can occur in the future.
+                            <br>
+                            <br>
+                            In long term the biggest contribution of the therapy for the couples is having a better communication and being more understanding towards one another. This is  also preparation for the problems that may occur in the future for the couple.
+                        </p>
 
-        
-                  <a class="btn btn-lg font-weight-bold custom-button" href="#" >Learn more<i class="fas fa-angle-right ml-2"></i></a>
+            
+                        <a class="btn btn-lg font-weight-bold custom-button" href="https://wa.me/447392206299" target=”_blank” >Learn more<i class="fas fa-angle-right ml-2"></i></a>
+                    {% endif %}
         
                 </div>
               
@@ -227,7 +395,15 @@
         <!--Jumbotron-->
         <div class="jumbotron jumbotron-header mb-0" id="push-down-under-nav" style="background-image: url('/static/header-family-counselling.jpg');">
             <div class="text-white text-center py-0 px-4">
-                <h1 class="card-title h1-responsive font-bold mx-auto my-5 py-5 jumbotron-text"><strong>Family Counselling</strong></h1>
+                <h1 class="card-title h1-responsive font-bold mx-auto my-5 py-5 jumbotron-text">
+                    <strong>
+                        {% if lang == "tr" %}
+                            Aile Danışmanlığı
+                        {% else %}
+                            Family Counselling
+                        {% endif %}
+                    </strong>
+                </h1>
             </div>
         </div>
 
@@ -239,25 +415,42 @@
                 </div>
         
                 <div class="col-lg-5 mb-4 mb-lg-0">
-        
-                  <h3 class="font-weight-bold" style="color:#0094d9;">What includes Family Counselling?</h3>
-                    
-                  <p class="text-muted">
-                    We provide support which includes partners and children, and see the family as a whole, that focuses on solutions in our family counselling sessions.
-                  </p>
+                    {% if lang == "tr" %}
+                        <h3 class="font-weight-bold" style="color:#0094d9;">Neler Aile Danışmanlığına Dahildir?</h3>
+                            
+                        <p class="text-muted">
+                            Aile danışmanları oturumlarımızda çözümlere odaklanan partnerleri veya çocukları içeren aileyi bir bütün olarak gören destek sağlıyoruz.
+                        </p>
 
-                  <p class="font-weight-bold">Here is the list of a few topics that we look into</p>
+                        <p class="font-weight-bold">Genellikle ilgilendiğimiz konular:</p>
 
-                  <ul>
-                    <li>Divorce counselling)</li> 
-                    <li>Communication problems</li> 
-                    <li>Communication with kids</li>
-                    <li>Raising healthy children</li>
-                  </ul>
+                        <ul>
+                            <li>Boşanma danışmanlığı</li> 
+                            <li>İletişim problemleri</li> 
+                            <li>Çocuklarla iletişim</li>
+                            <li>Sağlıklı çocuk yetiştirme</li>
+                        </ul>
 
-        
-                  <a class="btn btn-lg font-weight-bold custom-button" href="#" >Learn more<i class="fas fa-angle-right ml-2"></i></a>
-        
+                        <a class="btn btn-lg font-weight-bold custom-button" href="https://wa.me/447392206299" target=”_blank” >Daha Fazla Bilgi Al<i class="fas fa-angle-right ml-2"></i></a>
+                    {% else %}
+                        <h3 class="font-weight-bold" style="color:#0094d9;">What includes Family Counselling?</h3>
+                                
+                        <p class="text-muted">
+                            We provide support which includes partners and children, and see the family as a whole, that focuses on solutions in our family counselling sessions.
+                        </p>
+
+                        <p class="font-weight-bold">Here is the list of a few topics that we look into:</p>
+
+                        <ul>
+                            <li>Divorce counselling</li> 
+                            <li>Communication problems</li> 
+                            <li>Communication with kids</li>
+                            <li>Raising healthy children</li>
+                        </ul>
+
+                        <a class="btn btn-lg font-weight-bold custom-button" href="https://wa.me/447392206299" target=”_blank” >Learn more<i class="fas fa-angle-right ml-2"></i></a>
+                        
+                    {% endif %}
                 </div>
               
             </div>
@@ -268,7 +461,15 @@
         <!--Jumbotron-->
         <div class="jumbotron jumbotron-header mb-0" id="push-down-under-nav" style="background-image: url('/static/header-individual-counselling.jpg');">
             <div class="text-white text-center py-0 px-4">
-                <h1 class="card-title h1-responsive font-bold mx-auto my-5 py-5 jumbotron-text"><strong>Individual Counselling</strong></h1>
+                <h1 class="card-title h1-responsive font-bold mx-auto my-5 py-5 jumbotron-text">
+                    <strong>
+                        {% if lang == "tr" %}
+                            Bireysel Danışmanlık
+                        {% else %}
+                            Individual Counselling
+                        {% endif %}
+                    </strong>
+                </h1>
             </div>
         </div>
 
@@ -280,65 +481,101 @@
                 </div>
         
                 <div class="col-lg-5 mb-4 mb-lg-0">
-        
-                  <h3 class="font-weight-bold" style="color:#0094d9;">What includes Individual Counselling?</h3>
-                    
-                  <p class="text-muted">
-                    Individual counselling aims for the individuals to look into themselves and the events from a different perspective and to see the solutions which he/she could not see before. People can come for individual therapy to get help with the effects that’s still going on from the incidents in the past. (e.g. divorce, death, violence, exploitation, accidents, illnesses, cheating, natural disaster) 
-                    <br>
-                    <br>
-                    Our professional therapists most commonly use the CBT approach and also when needed other effective therapy approaches.
-                  </p>
-
-                  <p class="font-weight-bold">Here is the list of a few topics that we look into</p>
-
-                  <ul>
-                    <li>Depression</li> 
-                    <li>Post-Traumatic Stress Disorder (PTSD)</li> 
-                    <li>Obsessive Compulsive Disorder (OCD)</li>
-                    <li>Panic Disorders</li>
-                    <li>Anxiety</li>
-                    <li>Sexual Dysfunction</li>
-                    <li>Postpartum Depression</li>
-                    <li>Psychological problems that occurs during and after pregnancy</li>
-                    <li>Adult attention deficit disorder and hyperactivity</li>
-                    <li>Social Anxiety Disorder</li>
-                    <li>Personality disorders</li>
-                    <li>Hypochondriasis</li>
-                    <li>Schizoids Personality Disorder</li>
-                    <li>Paranoid Personality Disorder</li>
-                    <li>Bipolar Disorder (Treating both ends of the spectrum)</li>
-                    <li>Pain disorders (psychogenic pain)</li>
-                    <li>Body Dysmorphic Disorder</li>
-                    <li>Histrionic Personality Disorder</li>
-                    <li>Convection Disorder</li>
-                    <li>Dissociative Disorder</li>
-                    <li>Addicted Personality Disorder</li>
-                    <li>Borderline Personality Disorder</li>
-                    <li>Narcissistic Personality Disorder</li>
-                    <li>Weight Control</li>
-                    <li>Eating Disorders</li>
-                    <li>Sleeping Problems</li>
-                    <li>Making decisions</li>
-                    <li>EMDR</li>
-                    <li>Treatments For Losing Weight and Obesity with Cognitive Behavioral Therapy</li>
-                  </ul>
-
-        
-                  <a class="btn btn-lg font-weight-bold custom-button" href="#" >Learn more<i class="fas fa-angle-right ml-2"></i></a>
-        
+                    {% if lang == "tr" %}
+                        <h3 class="font-weight-bold" style="color:#0094d9;">Neler Bireysel Danışmanlığa Dahildir?</h3>
+                        
+                        <p class="text-muted">
+                        Bireysel danışmanlık, bireylerin kendilerine ve olaylara farklı bir perspektiften bakmasını ve daha önce göremediği çözümleri görmesini amaçlar. İnsanlar geçmişte yaşanan olaylardan hala devam eden etkiler konusunda yardım almak için bireysel terapiye gelebilirler. (Boşanma, ölüm, şiddet, istismar, travma, hastalıklar, aldatılma, doğal afet)
+                        <br>
+                        <br>
+                        Profesyonel terapistlerimiz en çok CBT yaklaşımını ve gerektiğinde diğer etkili tedavi yaklaşımlarını kullanırlar.
+                        </p>
+    
+                        <p class="font-weight-bold">Çalıştığımız konulardan başlıcaları:</p>
+    
+                        <ul>
+                        <li>Depresyon</li> 
+                        <li>Travma Sonrası Stres Bozukluğu (TSSB)</li> 
+                        <li>Obsesif Kompulsif Bozukluk (OKB)</li>
+                        <li>Panik Bozuklukları</li>
+                        <li>Kaygı</li>
+                        <li>Cinsel İşlev Bozukluğu</li>
+                        <li>Doğum Sonrası Depresyon</li>
+                        <li>Hamilelik sırasında ve sonrasında ortaya çıkan psikolojik sorunlar</li>
+                        <li>Yetişkinlerde dikkat eksikliği bozukluğu ve hiperaktivite</li>
+                        <li>Sosyal Anksiyete Bozukluğu</li>
+                        <li>Kişilik bozuklukları</li>
+                        <li>Hipokondriyazis</li>
+                        <li>Şizoidler Kişilik Bozukluğu</li>
+                        <li>Paranoid Kişilik Bozukluğu</li>
+                        <li>Bipolar Bozukluk (Spektrumun her iki ucunun tedavisi)</li>
+                        <li>Ağrı bozuklukları (psikojenik ağrı)</li>
+                        <li>Vücut Dismorfik Bozukluğu</li>
+                        <li>Histriyonik Kişilik Bozukluğu</li>
+                        <li>Konveksiyon Bozukluğu</li>
+                        <li>Dissosiyatif Bozukluk</li>
+                        <li>Bağımlı Kişilik Bozukluğu</li>
+                        <li>Sınır kişilik bozukluğu</li>
+                        <li>Narsistik kişilik bozukluğu</li>
+                        <li>Ağırlık kontrolü</li>
+                        <li>Yeme Bozuklukları</li>
+                        <li>Uyku problemleri</li>
+                        <li>Karar vermek</li>
+                        <li>EMDR</li>
+                        <li>Bilişsel Davranışçı Terapi ile Kilo ve Obezite Kaybı Tedavileri</li>
+                        </ul>
+    
+                        <a class="btn btn-lg font-weight-bold custom-button" href="https://wa.me/447392206299" target=”_blank” >Daha Fazla Bilgi Al<i class="fas fa-angle-right ml-2"></i></a>
+                    {% else %}
+                        <h3 class="font-weight-bold" style="color:#0094d9;">What includes Individual Counselling?</h3>
+                        
+                        <p class="text-muted">
+                        Individual counselling aims for the individuals to look into themselves and the events from a different perspective and to see the solutions which he/she could not see before. People can come for individual therapy to get help with the effects that’s still going on from the incidents in the past. (e.g. divorce, death, violence, exploitation, accidents, illnesses, cheating, natural disaster) 
+                        <br>
+                        <br>
+                        Our professional therapists most commonly use the CBT approach and also when needed other effective therapy approaches.
+                        </p>
+    
+                        <p class="font-weight-bold">Here is the list of a few topics that we look into</p>
+    
+                        <ul>
+                        <li>Depression</li> 
+                        <li>Post-Traumatic Stress Disorder (PTSD)</li> 
+                        <li>Obsessive Compulsive Disorder (OCD)</li>
+                        <li>Panic Disorders</li>
+                        <li>Anxiety</li>
+                        <li>Sexual Dysfunction</li>
+                        <li>Postpartum Depression</li>
+                        <li>Psychological problems that occurs during and after pregnancy</li>
+                        <li>Adult attention deficit disorder and hyperactivity</li>
+                        <li>Social Anxiety Disorder</li>
+                        <li>Personality disorders</li>
+                        <li>Hypochondriasis</li>
+                        <li>Schizoids Personality Disorder</li>
+                        <li>Paranoid Personality Disorder</li>
+                        <li>Bipolar Disorder (Treating both ends of the spectrum)</li>
+                        <li>Pain disorders (psychogenic pain)</li>
+                        <li>Body Dysmorphic Disorder</li>
+                        <li>Histrionic Personality Disorder</li>
+                        <li>Convection Disorder</li>
+                        <li>Dissociative Disorder</li>
+                        <li>Addicted Personality Disorder</li>
+                        <li>Borderline Personality Disorder</li>
+                        <li>Narcissistic Personality Disorder</li>
+                        <li>Weight Control</li>
+                        <li>Eating Disorders</li>
+                        <li>Sleeping Problems</li>
+                        <li>Making decisions</li>
+                        <li>EMDR</li>
+                        <li>Treatments For Losing Weight and Obesity with Cognitive Behavioral Therapy</li>
+                        </ul>
+    
+                        <a class="btn btn-lg font-weight-bold custom-button" href="https://wa.me/447392206299" target=”_blank” >Learn more<i class="fas fa-angle-right ml-2"></i></a>
+                    {% endif %}    
                 </div>
               
             </div>
             
-        </div>
-
-    {% else %}
-        <!--Jumbotron-->
-        <div class="jumbotron jumbotron-header mb-0" id="push-down-under-nav" style="background-image: url('/static/test.jpg');">
-            <div class="text-white text-center py-0 px-4">
-                <h1 class="card-title h1-responsive font-bold mx-auto my-5 py-5 jumbotron-text"><strong>404 NOT FOUND</strong></h1>
-            </div>
         </div>
 
     {% endif %}    
