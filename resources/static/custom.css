@@ -1,8 +1,15 @@
 /* Navbar component styling */
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 0.25rem;
+        padding-left: 0.25rem;
+    }
+}
+
 .custom-navbar {
     background-color: #fff !important;
-    padding-left: 1.0rem !important;
-    padding-right: 1.0rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
 }
 
 .custom-item {
@@ -69,6 +76,10 @@
     font-family: "Montserrat",sans-serif;
 }
 
+strong {
+    font-weight: 700 !important;
+}
+
 .purple-gradient-background {
     background: #B000F7; /* fallback color if gradients are not supported */
     background: -webkit-linear-gradient(bottom, rgba(255,110,196,1), rgba(143,139,247,1)); /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
@@ -78,8 +89,9 @@
 }
 
 .blue-gradient-background {
-	background: #B000F7; /* fallback color if gradients are not supported */
-	
+    background-color:#0094d9; /* fallback color if gradients are not supported */
+    color: white;
+
 	background: -moz-linear-gradient(top,#45cafc 0%, #ff7701 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45cafc), color-stop(100%,#303f9f)); /* Chrome,Safari4+ */
 	background: -webkit-linear-gradient(top,#45cafc 0%,#303f9f 100%); /* Chrome10+,Safari5.1+ */
@@ -406,8 +418,8 @@
 	position:fixed;
 	width:60px;
 	height:60px;
-	bottom:40px;
-	right:40px;
+	bottom:20px;
+	right:20px;
 	background-color:#53946F;
 	color:#FFF;
 	border-radius:50px;
