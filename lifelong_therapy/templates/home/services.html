@@ -3,7 +3,7 @@
 
 {% block title %} 
   {% if lang == "tr" %}
-    - Services
+    - Servisler
   {% else %}
     - Services
   {% endif %}
@@ -13,7 +13,7 @@
 
     {% if slugName == "addiction-counselling" %}
         <!--Jumbotron-->
-        <div class="jumbotron jumbotron-header mb-0" id="push-down-under-nav" style="background-image: url('/static/header-addiction-counselling.jpg');">
+        <div class="jumbotron jumbotron-header mb-0" id="push-down-under-nav" style="background-image: url('/static/header-addiction-counselling.jpg'); background-repeat: no-repeat; background-attachment: fixed;">
             <div class="text-white text-center py-0 px-4">
                 <h1 class="card-title h1-responsive font-bold mx-auto my-5 py-5 jumbotron-text">
                     <strong>
@@ -133,7 +133,7 @@
    
     {% elif slugName == "adolescent-counselling" %}
         <!--Jumbotron-->
-        <div class="jumbotron jumbotron-header mb-0" id="push-down-under-nav" style="background-image: url('/static/header-adolescent-counselling.jpg');">
+        <div class="jumbotron jumbotron-header mb-0" id="push-down-under-nav" style="background-image: url('/static/header-adolescent-counselling.jpg'); background-repeat: no-repeat; background-attachment: fixed;">
             <div class="text-white text-center py-0 px-4">
                 <h1 class="card-title h1-responsive font-bold mx-auto my-5 py-5 jumbotron-text">
                     <strong>
@@ -247,7 +247,7 @@
 
     {% elif slugName == "couples-and-marriage-counselling" %}
         <!--Jumbotron-->
-        <div class="jumbotron jumbotron-header mb-0" id="push-down-under-nav" style="background-image: url('/static/header-couples-and-marriage-counselling.jpg');">
+        <div class="jumbotron jumbotron-header mb-0" id="push-down-under-nav" style="background-image: url('/static/header-couples-and-marriage-counselling.jpg'); background-repeat: no-repeat; background-attachment: fixed;">
             <div class="text-white text-center py-0 px-4">
                 <h1 class="card-title h1-responsive font-bold mx-auto my-5 py-5 jumbotron-text">
                     <strong>
@@ -393,7 +393,7 @@
 
     {% elif slugName == "family-counselling" %}
         <!--Jumbotron-->
-        <div class="jumbotron jumbotron-header mb-0" id="push-down-under-nav" style="background-image: url('/static/header-family-counselling.jpg');">
+        <div class="jumbotron jumbotron-header mb-0" id="push-down-under-nav" style="background-image: url('/static/header-family-counselling.jpg'); background-repeat: no-repeat; background-attachment: fixed;">
             <div class="text-white text-center py-0 px-4">
                 <h1 class="card-title h1-responsive font-bold mx-auto my-5 py-5 jumbotron-text">
                     <strong>
@@ -457,9 +457,111 @@
             
         </div>
 
+    {% elif slugName == "children-counselling" %}
+        <!--Jumbotron-->
+        <div class="jumbotron jumbotron-header mb-0" id="push-down-under-nav" style="background-image: url('/static/header-children-counselling.jpg'); background-repeat: no-repeat; background-attachment: fixed;">
+            <div class="text-white text-center py-0 px-4">
+                <h1 class="card-title h1-responsive font-bold mx-auto my-5 py-5 jumbotron-text">
+                    <strong>
+                        {% if lang == "tr" %}
+                            Çocuk Danışmanlığı
+                        {% else %}
+                            Children Counselling
+                        {% endif %}
+                    </strong>
+                </h1>
+            </div>
+        </div>
+
+        <div class="container my-5 py-5 z-depth-1">
+            <div class="row px-md-5 dark-grey-text text-center text-lg-left">
+        
+                <div class="col-lg-7 mb-4 mb-lg-0">
+                    <img src="{% static "children-content.jpg" %}" class="img-fluid" alt="">
+                </div>
+        
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    {% if lang == "tr" %}
+                        <h3 class="font-weight-bold" style="color:#0094d9;">Neler Çocuk Danışmanlığına Dahildir?</h3>
+                            
+                        <p class="text-muted">
+                            Çocukların okul öncesi dönemde ve okul döneminde bulundukları yaş gruplarına özel sosyal, duygusal, sözel ve davranışsal gelişim özellikleri bulunmaktadır. 
+                            Gelişimsel süreçleri, bireysel özelliklerinden veya bulundukları sosyal çevreden, aile ortamından ve tutumlarından da etkilenmektedir.
+                        </p>
+
+                        <p class="text-muted">
+                            Çocuklar kendilerini yetişkinler kadar iyi ifade edemedikleri için ihtiyaçlarını duygusal ve davranışsal bazı mesajlar ile anne babalarına ve sosyal çevrelerine iletirler. 
+                            Oyun Terapisini çocuğa ve aileye yardım etmek için uzmanlarımızın sıklıkla kullanırlar.
+                        </p>
+
+                        <p class="font-weight-bold">Genellikle ilgilendiğimiz konular:</p>
+
+                        <ul>
+                            <li>Davranış Bozuklukları</li> 
+                            <li>Dikkat eksikliği ve hiperaktivite</li> 
+                            <li>Gelişim Problemi</li>
+                            <li>Çocukluk çağı depresyonu </li>
+                            <li>Tırnak yeme</li>
+                            <li>Tikler</li>
+                            <li>Alt ıslatma</li>
+                            <li>Çalma davranışı</li>
+                            <li>İştahsızlık ve beslenme problemleri</li>
+                            <li>Travma</li>
+                            <li>Evlat edinme süreci ve sonrası danışmanlık</li>
+                            <li>Boşanma süreci</li>
+                            <li>Kardeş kıskançlığı</li>
+                            <li>Kekemelik</li>
+                            <li>Parmak emme</li>
+                            <li>Korkular</li>
+                        </ul>
+
+                        <a class="btn btn-lg font-weight-bold custom-button" href="https://wa.me/447392206299" target=”_blank” >Daha Fazla Bilgi Al<i class="fas fa-angle-right ml-2"></i></a>
+                    {% else %}
+                        <h3 class="font-weight-bold" style="color:#0094d9;">What includes Family Counselling?</h3>
+                                
+                        <p class="text-muted">
+                            Children have social, emotional, verbal and behavioral development characteristics specific to their age groups in preschool and school years. 
+                            Their developmental processes are also affected by their individual characteristics or their social environment, family environment and attitudes.
+                        </p>
+
+                        <p class="text-muted">
+                            Since children cannot express themselves as well as adults, they convey their needs to their parents and social environments with some emotional and behavioral messages.
+                            Our professionals often use Play Therapy to help the child and family.
+                        </p>
+
+                        <p class="font-weight-bold">Here is the list of a few topics that we look into:</p>
+
+                        <ul>
+                            <li>Behaviour Disorders</li> 
+                            <li>Attention deficit and hyperactivity</li> 
+                            <li>Progress Problems</li>
+                            <li>Depression during childhood</li>
+                            <li>Nail biting</li>
+                            <li>Twitches</li>
+                            <li>Bed wetting</li>
+                            <li>Stealing Behaviour</li>
+                            <li>Lack of appetite and nutritional problems</li>
+                            <li>Trauma</li>
+                            <li>Adoption counselling</li>
+                            <li>Divorce effects on kids</li>
+                            <li>Enviousness of siblings</li>
+                            <li>Stuttering</li>
+                            <li>Thumb Sucking</li>
+                            <li>Phobias</li>
+                        </ul>
+
+                        <a class="btn btn-lg font-weight-bold custom-button" href="https://wa.me/447392206299" target=”_blank” >Learn more<i class="fas fa-angle-right ml-2"></i></a>
+                        
+                    {% endif %}
+                </div>
+              
+            </div>
+            
+        </div>
+
     {% elif slugName == "individual-counselling" %}
         <!--Jumbotron-->
-        <div class="jumbotron jumbotron-header mb-0" id="push-down-under-nav" style="background-image: url('/static/header-individual-counselling.jpg');">
+        <div class="jumbotron jumbotron-header mb-0" id="push-down-under-nav" style="background-image: url('/static/header-individual-counselling.jpg'); background-repeat: no-repeat; background-attachment: fixed;">
             <div class="text-white text-center py-0 px-4">
                 <h1 class="card-title h1-responsive font-bold mx-auto my-5 py-5 jumbotron-text">
                     <strong>
