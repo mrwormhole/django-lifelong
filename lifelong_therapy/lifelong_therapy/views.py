@@ -6,6 +6,35 @@ def language_picker(request,lang):
     request.session["lang"] = lang
     return redirect("home")
 
+def popup_form(request):
+    if request.method == "POST":
+        name = request.POST.get("name")
+        email = request.POST.get("email")
+        phone = request.POST.get("phone")
+        
+        # SEND EMAIL HERE
+        if (phone[0] == 0 and phone[1] == 7) or (phone[0] == 4 and phone[1] == 4):
+            import os
+            from sendgrid import SendGridAPIClient
+            from sendgrid.helpers.mail import Mail
+            message = Mail(
+               from_email='domain@lifelongtherapy.com',
+                to_emails='info@lifelongtherapy.com',
+                subject="Popup Form Notification",
+                html_content=('<strong>Hi! I am {}. My email is {}, My phone number is {}.</strong>').format(name, email, phone))
+            try:
+                sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
+                response = sg.send(message)
+                print(response.status_code)
+                print(response.body)
+                print(response.headers)
+            except Exception as e:
+                print(e.message)
+            
+        ###
+
+        return redirect("home")
+
 def home(request):
     if request.method == "POST":
         name = request.POST.get("name")

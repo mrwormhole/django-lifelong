@@ -1,0 +1,53 @@
+<section id="fixed-form-container">
+    {% if lang == "tr" %}
+    <div class="button">Telefonunuzu bırakın!</div>
+    {% else %}
+    <div class="button">Leave your phone!</div>
+    {% endif %}
+    <form class="body" method="POST" action="/popup-form/">
+        {% csrf_token %}
+        {% if lang == "tr" %}
+            <h4 class="popup-form-header">Zamanınız Size Kalsın!</h4>
+        {% else %}
+            <h4 class="popup-form-header">Save your own time!</h4>
+        {% endif %}
+
+        {% if lang == "tr" %}
+        <div class="form-group">
+            <label for="name">Adınız</label>
+            <input type="text" class="form-control" id="name" name="name" minlength="2" maxlength="40" required>
+        </div>
+      
+        <div class="form-group">
+            <label for="phone">Telefon*</label>
+            <input type="text" class="form-control" id="phone" name="phone" minlength="2" maxlength="20" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email" style="z-index: 10;">E-Posta</label>
+            <input type="email" class="form-control" id="email" name="email" minlength="2" maxlength="40" required>
+        </div>
+        {% else %}
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" minlength="2" maxlength="40" required>
+        </div>
+      
+        <div class="form-group">
+            <label for="phone">Phone*</label>
+            <input type="text" class="form-control" id="phone" name="phone" minlength="2" maxlength="20" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" minlength="2" maxlength="40" required>
+        </div>
+        {% endif %}  
+
+        {% if lang == "tr" %}
+            <button type="submit" class="btn btn-elegant waves-effect waves-light" style="background-color: #0094d9 !important;">Gönder</button>
+        {% else %}
+            <button type="submit" class="btn btn-elegant waves-effect waves-light" style="background-color: #0094d9 !important;">Submit</button>
+        {% endif %}
+    </form>
+</section>

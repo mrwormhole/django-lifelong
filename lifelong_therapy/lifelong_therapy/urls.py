@@ -6,6 +6,7 @@ from . import views
 
 urlpatterns = [
     path("lang/<slug:lang>",views.language_picker, name="language-picker"),
+    path("popup-form/", views.popup_form, name="popup-form"),
     path("", views.home, name="home"),
     path("online-therapy/", views.online_therapy, name="online-therapy"),
     path("contact/", views.contact, name="contact"),
