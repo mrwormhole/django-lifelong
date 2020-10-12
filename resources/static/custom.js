@@ -40,6 +40,14 @@ $(document).ready(function() {
   });
   // Home page testimonial
 
+  // Home page popup form
+  $("#fixed-form-container .body").hide();
+  $("#fixed-form-container .button").click(function () {
+          $(this).next("#fixed-form-container form").slideToggle(400);
+          $(this).toggleClass("expanded");
+  });
+  // Home page popup form
+
   // Global Jumbotrons 
   var pattern = GeoPattern.generate('LIFELONG COUNSELLING');
   $('#geopattern').css('background-image', pattern.toDataUrl());
