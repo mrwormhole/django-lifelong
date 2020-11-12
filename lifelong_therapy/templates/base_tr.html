@@ -45,6 +45,16 @@
         <!-- Custom JS -->
         <script defer type="text/javascript" src="{% static "custom.js" %}"></script>
         
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-EYNYMFDJYN"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-EYNYMFDJYN');
+        </script>
+        
         {% block scoped_js %}    
         {% endblock scoped_js %}
 
