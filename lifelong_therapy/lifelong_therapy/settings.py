@@ -27,7 +27,7 @@ DEBUG = False
 
 os.environ['SENDGRID_API_KEY'] = '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'
 
-ALLOWED_HOSTS = ["www.lifelongtherapy.com", "localhost", "127.0.0.1", "35.178.223.240"]
+ALLOWED_HOSTS = ["www.lifelongtherapy.com", "localhost", "127.0.0.1", "188.34.201.92"]
 
 
 # Application definition
